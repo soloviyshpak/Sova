@@ -1,0 +1,78 @@
+.page-jeweler {
+  padding-bottom: 127px;
+}
+.page-jeweler__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #000;
+  margin-bottom: 72px;
+}
+.page-jeweler__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 34px;
+}
+.page-jeweler__item {
+  width: 575px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 25px 25px 65px;
+}
+.page-jeweler-link {
+  &:hover {
+    .page-jeweler-title {
+      text-decoration: underline;
+    }
+  }
+}
+.page-jeweler-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #000;
+  padding-left: 48px;
+}
+.page-jeweler-adress {
+  font-weight: 500;
+  line-height: 1.6;
+  color: #000;
+  padding-left: 48px;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 24px;
+    height: 42px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: url('../img/icons/service/waypoint.svg');
+  }
+}
+.page-jeweler-time {
+  line-height: 1.5;
+  text-align: center;
+  color: #000;
+  max-width: 525px;
+  background: #f2f2f2;
+  border-radius: 8px;
+  padding: 7.5px 0 8.5px;
+  margin: 16px auto 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 20px;
+    height: 21px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: url('../img/icons/service/clock.svg');
+  }
+}

@@ -1,0 +1,87 @@
+.auth__wrapper {
+  background: url('../img/auth-bcg.jpg') no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-page__logo--auth {
+  font-size: 70px;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 72px;
+}
+.auth__registration {
+  width: 815px;
+  background: #fff;
+  border-radius: 59px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 38px 59px 42px;
+  position: relative;
+}
+.auth__close {
+  position: absolute;
+  top: 48px;
+  right: 54px;
+
+  &:hover {
+    svg path {
+      stroke: #000;
+    }
+  }
+}
+.auth__registration-title {
+  font-family: 'Inria Serif';
+  font-weight: 700;
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 46px;
+}
+.auth__registration-input {
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 24px 30px;
+  font-size: 36px;
+  margin-bottom: 41px;
+
+  &::placeholder {
+    font-family: 'Inria Serif';
+    font-size: 36px;
+    font-weight: 300;
+    color: #4d4d4d;
+  }
+}
+.auth__registration-input--tel {
+  margin-top: 34px;
+  margin-bottom: 54px;
+}
+.auth__label {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inria Serif';
+  font-weight: 300;
+  font-size: 36px;
+  color: #000;
+}
+.auth__registration-btn {
+  font-family: 'Inria Serif';
+  font-weight: 300;
+  font-size: 36px;
+  color: #fff;
+  background: #0c62c7;
+  border-radius: 12px;
+  max-width: 295px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  transition: all 0.3s;
+
+  &:hover {
+    scale: 1.1;
+  }
+}

@@ -1,0 +1,51 @@
+.page-table {
+  padding-top: 46px;
+  padding-bottom: 95px;
+}
+.page-table__table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.page-table__material {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: #000;
+}
+.page-table__table-row {
+  border-bottom: 1px solid #ccc;
+}
+.page-table__service {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  max-width: 310px;
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-bottom: 19px;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    background: #000;
+    border-radius: 100%;
+  }
+}
+.page-table__service--onerow {
+  &::before {
+    top: 50%;
+  }
+}
+.page-table__price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #000;
+  padding: 15px;
+}

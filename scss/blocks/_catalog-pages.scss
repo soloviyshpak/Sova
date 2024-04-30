@@ -1,0 +1,104 @@
+.product__container {
+  max-width: 1560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 312px;
+}
+.product__container--premium {
+  padding-top: 241px;
+}
+.categories-btn {
+  font-family: 'Inter';
+  font-weight: 300;
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  color: #000;
+  text-align: right;
+  margin-top: 28px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.products__list {
+  margin: 43px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 250px 304px;
+}
+.product__item {
+  max-width: 317px;
+}
+.product__item-link {
+  &:hover {
+    .product__item-title {
+      text-decoration: underline;
+    }
+  }
+}
+.product__item-preview {
+  margin-bottom: 56px;
+}
+.product__item-price {
+  font-family: 'Inter';
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  color: #000;
+  margin-bottom: 26px;
+}
+.product__item-title {
+  font-family: 'Inter';
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+
+// Cosmos page
+.cosmos-page {
+}
+.cosmos-page__title {
+  font-weight: 300;
+  font-size: 64px;
+  color: #092c52;
+  margin-left: 60px;
+}
+.cosmos-page__preview {
+  width: 100%;
+  margin-top: 14px;
+}
+.cosmos-page__preview-descr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+.cosmos-page__preview-descr-title {
+  font-family: 'Inter';
+  font-weight: 300;
+  font-size: 36px;
+  letter-spacing: 0.06em;
+  color: #000;
+  margin-right: 691px;
+}
+.cosmos-page__preview-pricebox {
+  display: flex;
+  align-items: center;
+}
+.cosmos-page__preview-price {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+.cosmos-page__preview-buy {
+  margin-left: 16px;
+  transition: all 0.3s;
+
+  &:hover {
+    scale: 1.1;
+  }
+}

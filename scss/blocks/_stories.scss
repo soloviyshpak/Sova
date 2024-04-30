@@ -1,0 +1,39 @@
+.stories {
+  padding-top: 70px;
+}
+.stories__title {
+  font-size: 24px;
+  line-height: 1.33333;
+  text-align: center;
+  color: #000;
+}
+.stories__content {
+  display: flex;
+  max-width: 984px;
+  margin: 58px auto 0;
+}
+.stories__content-item {
+  margin-right: 28px;
+  position: relative;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &::before {
+    content: '';
+    width: 144px;
+    height: 144px;
+    position: absolute;
+    top: -7px;
+    left: -6px;
+    border-radius: 72px;
+    background: linear-gradient(
+      162deg,
+      #2da0f6 0.85%,
+      #ed21cb 99.99%,
+      #b88d00 100%
+    );
+    z-index: -1;
+  }
+}

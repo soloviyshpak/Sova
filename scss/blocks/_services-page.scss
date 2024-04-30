@@ -1,0 +1,33 @@
+.services-page {
+  padding-top: 64px;
+  padding-bottom: 290px;
+}
+.services-page__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #000;
+}
+.services-page__text {
+  display: block;
+  max-width: 881px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: #000;
+  margin: 23px auto 0;
+}
+.services-page__info {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: #000;
+  background: #f2f2f2;
+  border-radius: 24px;
+  max-width: 474px;
+  padding: 8px 32px;
+  margin: 31px auto 0;
+}

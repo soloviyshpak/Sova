@@ -1,0 +1,38 @@
+.participants {
+  padding-bottom: 142px;
+}
+.participants__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+.participants__inner {
+  margin-top: 99px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.participants__store {
+  max-width: 310px;
+  background: #f2f2f2;
+  padding: 29px 32px 30px 32px;
+}
+.participants__store-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
+}
+.participants__store-adress {
+  line-height: 1.5;
+  text-align: center;
+  color: #333;
+  margin-top: 10px;
+}

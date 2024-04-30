@@ -1,0 +1,33 @@
+.rules {
+  padding-top: 614px;
+  padding-bottom: 124px;
+}
+.rules__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #000;
+}
+.rules__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.rules__item {
+  max-width: 392px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rules__item-img {
+  margin-bottom: 60px;
+}
+.rules__item-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  color: #000;
+}

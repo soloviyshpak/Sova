@@ -1,0 +1,53 @@
+.tradein-banner {
+  padding-top: 76px;
+  padding-bottom: 13px;
+}
+.tradein-banner__inner {
+  max-width: 1380px;
+  background: url('../img/trade-in/main-banner.jpg') no-repeat;
+  padding: 203px 171px 170px;
+}
+.tradein-banner__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.33333;
+  letter-spacing: 0.02em;
+  color: #fff;
+  max-width: 369px;
+  margin-bottom: 23px;
+}
+.tradein-banner__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #fff;
+  max-width: 314px;
+  margin-bottom: 46px;
+}
+.tradein-banner__btn {
+  display: block;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  max-width: 365px;
+  padding: 17px 89px;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 48px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    right: 95px;
+    transform: translateY(-50%);
+    background: url('../img/trade-in/btn-arrow.svg');
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

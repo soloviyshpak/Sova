@@ -1,0 +1,51 @@
+.pricelist {
+  padding-top: 201px;
+  padding-bottom: 219px;
+  background: url('../img/service/pricelist-bcg.jpg') no-repeat;
+  background-size: cover;
+}
+.pricelist__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px 57px;
+}
+.pricelist__item {
+  padding: 64.3px 95.24px 48.22px 97.17px;
+  width: 578px;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  background: #fff;
+}
+.pricelist__item-link {
+  &:hover {
+    .pricelist__item-title {
+      text-decoration: underline;
+    }
+  }
+}
+.pricelist__item-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.6;
+  text-align: center;
+  color: #000;
+  margin-bottom: 24px;
+}
+.pricelist__item-pricecell {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: #999;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 16px 0 16px;
+}
+.pricelist__item-price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.6;
+  text-align: center;
+  color: #000;
+}

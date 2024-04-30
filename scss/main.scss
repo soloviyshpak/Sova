@@ -1,0 +1,54 @@
+// Base
+@import './base/variables';
+@import './base/mixins';
+@import './base/fonts';
+@import './base/base';
+
+// Blocks
+
+// Sections
+@import './blocks/header';
+@import './blocks/stories';
+@import './blocks/premium';
+@import './blocks/collection';
+@import './blocks/cosmos';
+@import './blocks/brilliants';
+@import './blocks/footer';
+
+// Service sections
+@import './blocks/header-page';
+@import './blocks/service-banner';
+@import './blocks/advantage';
+@import './blocks/services-page';
+@import './blocks/pricelist';
+@import './blocks/choice';
+@import './blocks/wish';
+@import './blocks/footer-page';
+
+// Service pages
+@import './blocks/page-banner';
+@import './blocks/page-article';
+@import './blocks/page-table';
+@import './blocks/page-jeweler';
+
+// Guarantee page
+@import './blocks/guarantee';
+@import './blocks/about';
+@import './blocks/participants';
+@import './blocks/tradein-banner';
+@import './blocks/exchange';
+@import './blocks/howtochange';
+@import './blocks/instructions';
+@import './blocks/rules';
+
+// Catalog
+@import './blocks/catalog';
+
+// Catalog pages
+@import './blocks/catalog-pages';
+
+// Order
+@import './blocks/order';
+
+// Auth
+@import './blocks/auth';

@@ -1,0 +1,19 @@
+.page-banner {
+  padding-top: 57px;
+  margin-bottom: 79px;
+}
+.page-banner__banner {
+  background: url('../img/service/main-banner-bcg.png') no-repeat;
+  background-size: cover;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 104px 289px;
+}
+.page-banner__banner-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #000;
+}
