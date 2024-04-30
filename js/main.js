@@ -95,3 +95,18 @@ $('.product__sizes-link').on('click', function (e) {
 
   $(this).addClass('product__sizes-link--selected');
 });
+
+// Profile gender select
+$('.profile-edit__gender-label').on('click', function () {
+  if (
+    $('.profile-edit__gender-label').hasClass(
+      'profile-edit__gender-label--selected'
+    )
+  ) {
+    $('.profile-edit__gender-label').removeClass(
+      'profile-edit__gender-label--selected'
+    );
+  }
+
+  $(this).addClass('profile-edit__gender-label--selected');
+});
