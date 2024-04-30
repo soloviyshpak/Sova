@@ -120,7 +120,7 @@
               while ($row = $results->fetch_assoc()) {
                   echo '
                   <li class="product__item">
-                      <a href="#" class="product__item-link">
+                  <a href="product.php?id='. $row["id"] .'" class="product__item-link">
                           <img src="' . $row["image"] . '" alt="" class="product__item-preview" />
                           <p class="product__item-price">' . $row["price"] . ' р</p>
                           <h4 class="product__item-title">' . $row["name"] . '</h4>

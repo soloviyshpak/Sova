@@ -2519,6 +2519,7 @@
   font-size: 32px;
   color: #000;
   margin-bottom: 54px;
+  max-width: 556px;
 }
 
 .product__price {
