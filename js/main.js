@@ -84,3 +84,14 @@ var swiper = new Swiper('.brilliants__slider', {
     prevEl: '.brilliants__slide-prev',
   },
 });
+
+// Select size of product
+$('.product__sizes-link').on('click', function (e) {
+  e.preventDefault();
+
+  if ($('.product__sizes-link').hasClass('product__sizes-link--selected')) {
+    $('.product__sizes-link').removeClass('product__sizes-link--selected');
+  }
+
+  $(this).addClass('product__sizes-link--selected');
+});
