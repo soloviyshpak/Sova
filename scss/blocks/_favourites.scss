@@ -1,0 +1,47 @@
+.favourites__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.favourites__title {
+  font-family: 'Inter';
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 25px;
+}
+.favourites__list {
+  padding: 60px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 100px;
+}
+.favourites__list-item {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.favourites__list-img {
+  margin-bottom: 103px;
+}
+.favourites__list-info {
+}
+.favourites__list-price {
+  font-family: 'Inter';
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 13px;
+}
+.favourites__list-title {
+  font-family: 'Inter';
+  font-size: 16px;
+  color: #000;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.favourites__list-rating {
+  margin-top: 17px;
+}
+.favourites__list-rate {
+}
