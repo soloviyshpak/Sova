@@ -2896,4 +2896,97 @@
 }
 .profile-edit__save:hover {
   scale: 1.1;
+}
+
+.basket__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 37px 53px 124px 25px;
+}
+
+.basket__title {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 53px;
+}
+
+.basket__inner-item {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  border-top: 1px solid #000;
+  padding-top: 51px;
+  padding-bottom: 57px;
+}
+
+.basket__inner-img {
+  height: 246px;
+}
+
+.basket__inner-title {
+  font-family: "Inter";
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 44px;
+}
+
+.basket__innet-details {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 82px;
+       column-gap: 82px;
+}
+
+.basket__inner-price_current {
+  font-family: "Inter";
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.basket__inner-price_salebox {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 26px;
+       column-gap: 26px;
+}
+
+.basket__inner-price_old {
+  font-family: "Inter";
+  font-size: 32px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.basket__inner-price_sale {
+  display: block;
+  width: 50px;
+  padding: 3px 0;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 15px;
+  color: #fff;
+  background: #bd3232;
+  border-radius: 9px;
+}
+
+.basket__inner-controls {
+  background: #f1f1f1;
+  border-radius: 15px;
+  max-width: 275px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 93px;
+       column-gap: 93px;
+  padding: 17px 37px 17px 32px;
+}
+
+.basket__inner-count {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 32px;
+  color: #000;
 }/*# sourceMappingURL=main.css.map */
