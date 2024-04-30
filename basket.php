@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Украшения на заказ – Sova</title>
+    <title>Корзина – Sova</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link
       rel="stylesheet"
@@ -22,9 +22,9 @@
                 >8 800 1000 750</a
               >
             </div>
-            <a href="index.html" class="header-page__logo">SOVÁ</a>
+            <a href="index.php" class="header-page__logo">SOVÁ</a>
             <div class="header-page__right-block">
-              <a href="order.html" class="header-page__right-decor"
+              <a href="order.php" class="header-page__right-decor"
                 >Украшения на заказ</a
               >
               <div class="header-page__right-block_account">
@@ -62,7 +62,7 @@
                     />
                   </svg>
                 </a>
-                <a href="#" class="header-page__right-account">
+                <a href="preauth.php" class="header-page__right-account">
                   <svg
                     width="18"
                     height="18"
@@ -84,13 +84,13 @@
           </div>
           <div class="header-page__second">
             <div class="header-page__second-left">
-              <a href="catalog.html" class="header-page__second-catalog"
+              <a href="catalog.php" class="header-page__second-catalog"
                 >КАТАЛОГ</a
               >
               <a href="#" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
             </div>
             <div class="header-page__second-right">
-              <a href="premium.html" class="header-page__second-premium"
+              <a href="premium.php" class="header-page__second-premium"
                 >PREMIUM</a
               >
               <a href="#" class="header-page__second-link">Акции</a>
@@ -100,72 +100,126 @@
         </div>
       </header>
       <main class="main">
-        <section class="meet">
-          <div class="catalog__container">
-            <h1 class="meet__title">
-              Теперь вы можете создать украшение своей мечты сами!
-            </h1>
-            <p class="meet__subtitle">Познакомьтесь с редактором украшений</p>
-            <a href="#" class="meet__btn">Познакомиться</a>
-          </div>
-        </section>
-        <section class="order">
-          <div class="catalog__container">
-            <form class="order__form">
-              <h2 class="order__title">
-                Оставьте заявку на создание уникального украшения
-              </h2>
-              <label class="order__form-label">
-                <h5 class="order__form-title">Имя*</h5>
-                <input
-                  type="text"
-                  class="order__form-input"
-                  required
-                  placeholder="Иван Иванов"
-                />
-              </label>
-              <label class="order__form-label">
-                <h5 class="order__form-title">Телефон*</h5>
-                <input
-                  type="tel"
-                  class="order__form-input order__form-input--phone"
-                  name="phone"
-                  required
-                  placeholder="+7 (___) ___ - __ - __"
-                />
-              </label>
-              <label class="order__form-label">
-                <h5 class="order__form-title">E-mail*</h5>
-                <input
-                  type="email"
-                  class="order__form-input"
-                  required
-                  placeholder="ivanov@email.ru"
-                />
-              </label>
-              <label class="order__form-label">
-                <h5 class="order__form-title">Бюджет на украшение</h5>
-                <input
-                  type="number"
-                  class="order__form-input"
-                  placeholder="Минимальный заказ - от 50 000 ₽"
-                />
-              </label>
-              <label class="order__form-label">
-                <h5 class="order__form-title">Коментарий</h5>
-                <textarea
-                  class="order__form-textarea"
-                  cols="30"
-                  rows="10"
-                  placeholder="Подробно опишите ваши пожелания по изделию или вставьте сюда ссылку на изделие"
-                ></textarea>
-              </label>
-              <button type="submit" class="order__form-btn">
-                Оставить заявку
-              </button>
-            </form>
-          </div>
-        </section>
+        <div class="basket__wrapper">
+          <h2 class="basket__title">Корзина</h2>
+          <ul class="basket__inner">
+            <li class="basket__inner-item">
+              <img src="img/Photoroom.png" alt="" class="basket__inner-img" />
+              <div class="basket__inner-info">
+                <h4 class="basket__inner-title">
+                  Брошь из серебра с фианитами
+                </h4>
+                <div class="basket__innet-details">
+                  <div class="basket__inner-price">
+                    <p class="basket__inner-price_current">3996 ₽</p>
+                    <div class="basket__inner-price_salebox">
+                      <p class="basket__inner-price_old">9990 ₽</p>
+                      <span class="basket__inner-price_sale">-60%</span>
+                    </div>
+                  </div>
+                  <div class="basket__inner-controls">
+                    <p class="basket__inner-count">1 шт</p>
+                    <a href="#" class="basket__inner-del">
+                      <img src="img/icons/del-from-basket.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="basket__inner-item">
+              <img src="img/Photoroom.png" alt="" class="basket__inner-img" />
+              <div class="basket__inner-info">
+                <h4 class="basket__inner-title">
+                  Брошь из серебра с фианитами
+                </h4>
+                <div class="basket__innet-details">
+                  <div class="basket__inner-price">
+                    <p class="basket__inner-price_current">3996 ₽</p>
+                    <div class="basket__inner-price_salebox">
+                      <p class="basket__inner-price_old">9990 ₽</p>
+                      <span class="basket__inner-price_sale">-60%</span>
+                    </div>
+                  </div>
+                  <div class="basket__inner-controls">
+                    <p class="basket__inner-count">1 шт</p>
+                    <a href="#" class="basket__inner-del">
+                      <img src="img/icons/del-from-basket.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="basket__inner-item">
+              <img src="img/Photoroom.png" alt="" class="basket__inner-img" />
+              <div class="basket__inner-info">
+                <h4 class="basket__inner-title">
+                  Брошь из серебра с фианитами
+                </h4>
+                <div class="basket__innet-details">
+                  <div class="basket__inner-price">
+                    <p class="basket__inner-price_current">3996 ₽</p>
+                    <div class="basket__inner-price_salebox">
+                      <p class="basket__inner-price_old">9990 ₽</p>
+                      <span class="basket__inner-price_sale">-60%</span>
+                    </div>
+                  </div>
+                  <div class="basket__inner-controls">
+                    <p class="basket__inner-count">1 шт</p>
+                    <a href="#" class="basket__inner-del">
+                      <img src="img/icons/del-from-basket.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="basket__inner-item">
+              <img src="img/Photoroom.png" alt="" class="basket__inner-img" />
+              <div class="basket__inner-info">
+                <h4 class="basket__inner-title">
+                  Брошь из серебра с фианитами
+                </h4>
+                <div class="basket__innet-details">
+                  <div class="basket__inner-price">
+                    <p class="basket__inner-price_current">3996 ₽</p>
+                    <div class="basket__inner-price_salebox">
+                      <p class="basket__inner-price_old">9990 ₽</p>
+                      <span class="basket__inner-price_sale">-60%</span>
+                    </div>
+                  </div>
+                  <div class="basket__inner-controls">
+                    <p class="basket__inner-count">1 шт</p>
+                    <a href="#" class="basket__inner-del">
+                      <img src="img/icons/del-from-basket.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="basket__inner-item">
+              <img src="img/Photoroom.png" alt="" class="basket__inner-img" />
+              <div class="basket__inner-info">
+                <h4 class="basket__inner-title">
+                  Брошь из серебра с фианитами
+                </h4>
+                <div class="basket__innet-details">
+                  <div class="basket__inner-price">
+                    <p class="basket__inner-price_current">3996 ₽</p>
+                    <div class="basket__inner-price_salebox">
+                      <p class="basket__inner-price_old">9990 ₽</p>
+                      <span class="basket__inner-price_sale">-60%</span>
+                    </div>
+                  </div>
+                  <div class="basket__inner-controls">
+                    <p class="basket__inner-count">1 шт</p>
+                    <a href="#" class="basket__inner-del">
+                      <img src="img/icons/del-from-basket.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </main>
       <footer class="footer-page">
         <div class="container">
@@ -199,6 +253,6 @@
     </div>
   </body>
   <script src="js/jquery-3.7.1.min.js"></script>
-  <script src="https://unpkg.com/imask"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </html>

@@ -22,9 +22,9 @@
                 >8 800 1000 750</a
               >
             </div>
-            <a href="index.html" class="header-page__logo">SOVÁ</a>
+            <a href="index.php" class="header-page__logo">SOVÁ</a>
             <div class="header-page__right-block">
-              <a href="order.html" class="header-page__right-decor"
+              <a href="order.php" class="header-page__right-decor"
                 >Украшения на заказ</a
               >
               <div class="header-page__right-block_account">
@@ -62,7 +62,7 @@
                     />
                   </svg>
                 </a>
-                <a href="#" class="header-page__right-account">
+                <a href="preauth.php" class="header-page__right-account">
                   <svg
                     width="18"
                     height="18"
@@ -84,13 +84,13 @@
           </div>
           <div class="header-page__second">
             <div class="header-page__second-left">
-              <a href="catalog.html" class="header-page__second-catalog"
+              <a href="catalog.php" class="header-page__second-catalog"
                 >КАТАЛОГ</a
               >
               <a href="#" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
             </div>
             <div class="header-page__second-right">
-              <a href="premium.html" class="header-page__second-premium"
+              <a href="premium.php" class="header-page__second-premium"
                 >PREMIUM</a
               >
               <a href="#" class="header-page__second-link">Акции</a>
@@ -185,7 +185,7 @@
           <div class="container">
             <ul class="pricelist__list">
               <li class="pricelist__item">
-                <a href="clean.html" class="pricelist__item-link">
+                <a href="clean.php" class="pricelist__item-link">
                   <h4 class="pricelist__item-title">
                     Чистка и полировка изделий
                   </h4>
@@ -195,7 +195,7 @@
                 </a>
               </li>
               <li class="pricelist__item">
-                <a href="repair.html" class="pricelist__item-link">
+                <a href="repair.php" class="pricelist__item-link">
                   <h4 class="pricelist__item-title">Ремонт замков</h4>
                   <div class="pricelist__item-pricecell">
                     от <span class="pricelist__item-price">600 ₽</span>
@@ -203,7 +203,7 @@
                 </a>
               </li>
               <li class="pricelist__item">
-                <a href="attach.html" class="pricelist__item-link">
+                <a href="attach.php" class="pricelist__item-link">
                   <h4 class="pricelist__item-title">Закрепка камней</h4>
                   <div class="pricelist__item-pricecell">
                     от <span class="pricelist__item-price">800 ₽</span>
@@ -211,7 +211,7 @@
                 </a>
               </li>
               <li class="pricelist__item">
-                <a href="size.html" class="pricelist__item-link">
+                <a href="size.php" class="pricelist__item-link">
                   <h4 class="pricelist__item-title">
                     Уменьшение размера колец
                   </h4>

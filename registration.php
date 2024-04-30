@@ -14,11 +14,11 @@
   <body>
     <div class="wrapper auth__wrapper">
       <seciton class="auth">
-        <a href="index.html" class="header-page__logo header-page__logo--auth"
+        <a href="index.php" class="header-page__logo header-page__logo--auth"
           >SOVÁ</a
         >
         <form class="auth__registration">
-          <a href="index.html" class="auth__close"
+          <a href="preauth.php" class="auth__close"
             ><svg
               width="42"
               height="45"

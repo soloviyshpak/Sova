@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Чистка и полировка изделий – Sova</title>
+    <title>Ремонт замков – Sova</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link
       rel="stylesheet"
@@ -22,9 +22,9 @@
                 >8 800 1000 750</a
               >
             </div>
-            <a href="index.html" class="header-page__logo">SOVÁ</a>
+            <a href="index.php" class="header-page__logo">SOVÁ</a>
             <div class="header-page__right-block">
-              <a href="order.html" class="header-page__right-decor"
+              <a href="order.php" class="header-page__right-decor"
                 >Украшения на заказ</a
               >
               <div class="header-page__right-block_account">
@@ -62,7 +62,7 @@
                     />
                   </svg>
                 </a>
-                <a href="#" class="header-page__right-account">
+                <a href="preauth.php" class="header-page__right-account">
                   <svg
                     width="18"
                     height="18"
@@ -84,13 +84,13 @@
           </div>
           <div class="header-page__second">
             <div class="header-page__second-left">
-              <a href="catalog.html" class="header-page__second-catalog"
+              <a href="catalog.php" class="header-page__second-catalog"
                 >КАТАЛОГ</a
               >
               <a href="#" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
             </div>
             <div class="header-page__second-right">
-              <a href="premium.html" class="header-page__second-premium"
+              <a href="premium.php" class="header-page__second-premium"
                 >PREMIUM</a
               >
               <a href="#" class="header-page__second-link">Акции</a>
@@ -103,64 +103,52 @@
         <section class="page-banner">
           <div class="container">
             <div class="page-banner__banner">
-              <h1 class="page-banner__banner-title">
-                Чистка и полировка изделий
-              </h1>
+              <h1 class="page-banner__banner-title">Ремонт замков</h1>
             </div>
           </div>
         </section>
         <article class="page-article">
           <div class="container">
             <p class="page-article-paragraph">
-              Драгоценные украшения нуждаются в бережном отношении и уходе. Они
-              регулярно контактируют с водой, косметикой и парфюмерией, на них
-              оседает кожный себум, пыль. Всё это приводит к тому, что
-              на ювелирных изделиях появляется налет и потемнения. Подарите
-              своим любимым украшениям профессиональную чистку и полировку!
+              Замок на цепочках и браслетах — важная деталь конструкции. Именно
+              он отвечает за сохранность украшения на протяжении долгих лет.
+              Если вы стали замечать ненадежность фиксации, замок начал заедать
+              или не закрывается до конца, — это серьезный повод задуматься
+              о ремонте. Застёжка может в любой момент сломаться или
+              деформироваться, а это наверняка повлечет за собой потерю
+              драгоценного украшения.
             </p>
             <p class="page-article-paragraph">
-              В ювелирную мастерскую SOVÁ вы можете отдать любое свое изделие:
+              Не стоит пытаться самостоятельно устранить дефект. Такой подход
+              может привести к окончательной поломке замка или увеличить
+              стоимость будущего ремонта. Замену сломанного карабина или
+              исправление ослабленного винта лучше доверить профессионалу.
             </p>
+            <p class="page-article-paragraph">
+              Просто обращайтесь в ювелирную мастерскую SOVÁ. Здесь выполняется
+              ремонт замков ювелирных изделий любой сложности. Одновременно
+              вы получаете консультацию по уходу, чтобы украшение радовало вас
+              как можно дольше.
+            </p>
+            <p class="page-article-paragraph">К вашим услугам:</p>
             <ul class="page-article-list">
-              <li class="page-article-item">
-                кольцо, серьги, кулон, брошь, браслет, цепь;
-              </li>
-              <li class="page-article-item">из золота или серебра;</li>
-              <li class="page-article-item">
-                с камнями, эмалью или без вставок.
-              </li>
+              <li class="page-article-item">современное оборудование;</li>
+              <li class="page-article-item">качественные материалы;</li>
+              <li class="page-article-item">квалифицированные специалисты.</li>
             </ul>
             <p class="page-article-paragraph">
-              Опытный мастер в первую очередь определит, какой способ чистки
-              и полировки наиболее безопасен и эффективен для вашего украшения.
+              Ювелиры мастерской выполняют ремонт с особой внимательностью
+              и аккуратностью. При этом благодаря большому опыту они способны
+              справиться с задачей в короткие сроки. Мастера готовы восстановить
+              целостность штифтов или не штифтовых застежек браслетов и цепочек
+              из любого благородного металла: золотых и серебряных.
             </p>
             <p class="page-article-paragraph">
-              Ультразвуковая чистка всего за 20 минут устранит даже самые
-              сложные загрязнения. Изделие помещается в ванну со специальным
-              раствором, затем включается прибор, который создаёт вибрации.
-              Таким образом, грязь расщепляется на частицы и оседает на дне.
-            </p>
-            <p class="page-article-paragraph">
-              Второй популярный вариант чистки — с помощью химического состава.
-              Исходя из металла, конструкции, типа камня, мастер подбирает
-              активные вещества и компоненты, которые идеально справятся
-              с задачей.
-            </p>
-            <p class="page-article-paragraph">
-              Полировка ювелирных украшений сделает их такими же яркими, как
-              в день покупки. Благодаря данной услуге можно убрать царапины
-              и потертости. За доступную стоимость полировка колец поможет
-              вернуть вашему любимому изделию былое сияние.
-            </p>
-            <p class="page-article-paragraph">
-              Цены определяются мастером после визуального осмотра. Стоимость
-              зависит от типа и материала украшения.
-            </p>
-            <p class="page-article-paragraph">
-              Даже если видимых потемнений нет, мы рекомендуем ежегодную
-              профилактику ювелирных изделий. Приносите свои любимые изделия
-              ювелирам на чистку, чтобы они как можно дольше сохраняли свой
-              драгоценный блеск.
+              При первичном осмотре мастер определит, подлежит замок
+              восстановлению или требуется полная замена, нужна пайка или можно
+              обойтись без нее. От этого, а также от металла (золото или
+              серебро) зависит стоимость работы. Окончательная цена будет
+              непременно согласована с вами до начала ремонта.
             </p>
           </div>
         </article>
@@ -174,48 +162,32 @@
                   <td class="page-table__material">золото</td>
                 </tr>
                 <tr class="page-table__table-row">
-                  <td class="page-table__service">
-                    Промывка и полировка украшений SOVÁ
-                  </td>
-                  <td class="page-table__price">0 ₽</td>
-                  <td class="page-table__price">0 ₽</td>
-                </tr>
-                <tr class="page-table__table-row">
-                  <td class="page-table__service">
-                    Полировка с промывкой гладких обручальных колец без вставок
-                  </td>
-                  <td class="page-table__price">200 ₽</td>
-                  <td class="page-table__price">200 ₽</td>
-                </tr>
-                <tr class="page-table__table-row">
-                  <td class="page-table__service">
-                    Полировка с промывкой ювелирных украшений и столовых
-                    приборов до 10 грамм
-                  </td>
-                  <td class="page-table__price">300 ₽</td>
-                  <td class="page-table__price">300 ₽</td>
-                </tr>
-                <tr class="page-table__table-row">
-                  <td class="page-table__service">
-                    Полировка с промывкой цепевязальных украшений до 20 грамм
+                  <td class="page-table__service page-table__service--onerow">
+                    Ремонт не штифтового замка
                   </td>
                   <td class="page-table__price">400 ₽</td>
-                  <td class="page-table__price">400 ₽</td>
+                  <td class="page-table__price">600 ₽</td>
                 </tr>
                 <tr class="page-table__table-row">
-                  <td class="page-table__service">
-                    Полировка с промывкой ювелирных украшений и столовых
-                    приборов от 10 грамм
+                  <td class="page-table__service page-table__service--onerow">
+                    Ремонт не штифтового замка
                   </td>
-                  <td class="page-table__price">500 ₽</td>
-                  <td class="page-table__price">500 ₽</td>
+                  <td class="page-table__price">1000 ₽</td>
+                  <td class="page-table__price">1200 ₽</td>
                 </tr>
                 <tr class="page-table__table-row">
-                  <td class="page-table__service">
-                    Полировка с промывкой цепевязальных украшений от 20 грамм
+                  <td class="page-table__service page-table__service--onerow">
+                    Замена без пайки
                   </td>
-                  <td class="page-table__price">600 ₽</td>
-                  <td class="page-table__price">600 ₽</td>
+                  <td class="page-table__price">100 ₽</td>
+                  <td class="page-table__price">100 ₽</td>
+                </tr>
+                <tr class="page-table__table-row">
+                  <td class="page-table__service page-table__service--onerow">
+                    Замена с пайкой
+                  </td>
+                  <td class="page-table__price">300 ₽</td>
+                  <td class="page-table__price">500 ₽</td>
                 </tr>
               </tbody>
             </table>

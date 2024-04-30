@@ -23,8 +23,8 @@
           </div>
           <a href="#" class="header__logo">SOVÁ</a>
           <div class="header__right-block">
-            <a href="catalog.html" class="header__right-catalog">Каталог</a>
-            <a href="order.html" class="header__right-decor"
+            <a href="catalog.php" class="header__right-catalog">Каталог</a>
+            <a href="order.php" class="header__right-decor"
               >Украшения на заказ</a
             >
             <div class="header__right-block_account">
@@ -62,7 +62,7 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="header__right-account">
+              <a href="preauth.php" class="header__right-account">
                 <svg
                   width="18"
                   height="18"
@@ -662,17 +662,17 @@
                 >
               </li>
               <li class="footer__top-list_item">
-                <a href="service.html" class="footer__top-list_link"
+                <a href="service.php" class="footer__top-list_link"
                   >Сервис и ремонт</a
                 >
               </li>
               <li class="footer__top-list_item">
-                <a href="privilege.html" class="footer__top-list_link"
+                <a href="privilege.php" class="footer__top-list_link"
                   >Подарочная карта</a
                 >
               </li>
               <li class="footer__top-list_item">
-                <a href="tradein.html" class="footer__top-list_link"
+                <a href="tradein.php" class="footer__top-list_link"
                   >Бонусная программа</a
                 >
               </li>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Каталог – Sova</title>
+    <title>Профиль – Sova</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link
       rel="stylesheet"
@@ -22,9 +22,9 @@
                 >8 800 1000 750</a
               >
             </div>
-            <a href="index.html" class="header-page__logo">SOVÁ</a>
+            <a href="index.php" class="header-page__logo">SOVÁ</a>
             <div class="header-page__right-block">
-              <a href="order.html" class="header-page__right-decor"
+              <a href="order.php" class="header-page__right-decor"
                 >Украшения на заказ</a
               >
               <div class="header-page__right-block_account">
@@ -62,7 +62,7 @@
                     />
                   </svg>
                 </a>
-                <a href="#" class="header-page__right-account">
+                <a href="preauth.php" class="header-page__right-account">
                   <svg
                     width="18"
                     height="18"
@@ -84,13 +84,13 @@
           </div>
           <div class="header-page__second">
             <div class="header-page__second-left">
-              <a href="catalog.html" class="header-page__second-catalog"
+              <a href="catalog.php" class="header-page__second-catalog"
                 >КАТАЛОГ</a
               >
               <a href="#" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
             </div>
             <div class="header-page__second-right">
-              <a href="premium.html" class="header-page__second-premium"
+              <a href="premium.php" class="header-page__second-premium"
                 >PREMIUM</a
               >
               <a href="#" class="header-page__second-link">Акции</a>
@@ -100,189 +100,82 @@
         </div>
       </header>
       <main class="main">
-        <div class="catalog__container">
-          <section class="categories">
-            <h2 class="categories__title">Категории</h2>
-            <ul class="categories__list">
-              <li class="categories__item">
-                <a href="#" class="categories__item-link"
-                  ><img
-                    src="img/catalog/categories/rings.png"
-                    alt=""
-                    class="categories__item-img"
-                  />
-                  <h4 class="categories__item-title">Кольца</h4>
-                </a>
-              </li>
-              <li class="categories__item">
-                <a href="#" class="categories__item-link"
-                  ><img
-                    src="img/catalog/categories/earrings.png"
-                    alt=""
-                    class="categories__item-img"
-                  />
-                  <h4 class="categories__item-title">Серьги</h4>
-                </a>
-              </li>
-              <li class="categories__item">
-                <a href="#" class="categories__item-link"
-                  ><img
-                    src="img/catalog/categories/chains.png"
-                    alt=""
-                    class="categories__item-img"
-                  />
-                  <h4 class="categories__item-title">Цепи</h4>
-                </a>
-              </li>
-              <li class="categories__item">
-                <a href="#" class="categories__item-link"
-                  ><img
-                    src="img/catalog/categories/pendants.png"
-                    alt=""
-                    class="categories__item-img"
-                  />
-                  <h4 class="categories__item-title">Подвески</h4>
-                </a>
-              </li>
-              <li class="categories__item">
-                <a href="#" class="categories__item-link"
-                  ><img
-                    src="img/catalog/categories/bracelets.png"
-                    alt=""
-                    class="categories__item-img"
-                  />
-                  <h4 class="categories__item-title">Браслеты</h4>
-                </a>
-              </li>
-              <li class="categories__item">
-                <a href="#" class="categories__item-link"
-                  ><img
-                    src="img/catalog/categories/brooches.png"
-                    alt=""
-                    class="categories__item-img"
-                  />
-                  <h4 class="categories__item-title">Броши</h4>
-                </a>
-              </li>
-              <li class="categories__item">
-                <a href="#" class="categories__item-link"
-                  ><img
-                    src="img/catalog/categories/necklace.png"
-                    alt=""
-                    class="categories__item-img"
-                  />
-                  <h4 class="categories__item-title">Колье</h4>
-                </a>
-              </li>
-              <li class="categories__item">
-                <a href="#" class="categories__item-link"
-                  ><img
-                    src="img/catalog/categories/watches.png"
-                    alt=""
-                    class="categories__item-img"
-                  />
-                  <h4 class="categories__item-title">Часы</h4>
-                </a>
-              </li>
-            </ul>
-          </section>
-          <section class="materials">
-            <h2 class="materials__title">Материал</h2>
-            <ul class="materials__list">
-              <li class="materials__item-item">
-                <a href="red-gold.php" class="materials__item-link">
-                  <img
-                    src="img/catalog/material/red-gold.png"
-                    alt=""
-                    class="materials__item-img"
-                  />
-                  <h4 class="materials__item-title">Красное золото</h4>
-                </a>
-              </li>
-              <li class="materials__item-item">
-                <a href="white-gold.php" class="materials__item-link">
-                  <img
-                    src="img/catalog/material/white-gold.png"
-                    alt=""
-                    class="materials__item-img"
-                  />
-                  <h4 class="materials__item-title">Белое золото</h4>
-                </a>
-              </li>
-              <li class="materials__item-item">
-                <a href="steel.php" class="materials__item-link">
-                  <img
-                    src="img/catalog/material/steel.png"
-                    alt=""
-                    class="materials__item-img"
-                  />
-                  <h4 class="materials__item-title">Сталь</h4>
-                </a>
-              </li>
-              <li class="materials__item-item">
-                <a href="silver.php" class="materials__item-link">
-                  <img
-                    src="img/catalog/material/silver.png"
-                    alt=""
-                    class="materials__item-img"
-                  />
-                  <h4 class="materials__item-title">Серебро</h4>
-                </a>
-              </li>
-            </ul>
-          </section>
-          <section class="gender">
-            <h2 class="gender__title">Для кого</h2>
-            <div class="gender__buttons">
-              <a href="woman.php" class="gender__btn">Для женщин</a>
-              <a href="man.php" class="gender__btn">Для мужчин</a>
+        <div class="profile__wrapper">
+          <div class="profile__header">
+            <div class="profile__header-info">
+              <h1 class="profile__name">Фамилия Имя</h1>
+              <p class="profile__number">+7 (900) 154-65-00</p>
             </div>
-          </section>
-          <section class="inserts">
-            <h2 class="inserts__title">Вставки</h2>
-            <ul class="inserts__list">
-              <li class="inserts__item">
-                <a href="brilliant.php" class="inserts__item-link">
+            <a href="#" class="profile__header-edit">Редактировать профиль</a>
+          </div>
+          <div class="profile__body">
+            <ul class="profile__links">
+              <li class="profile__links-item profile__links-item--city">
+                <a href="#" class="profile__links-link">Коломна</a>
+              </li>
+              <li class="profile__links-item profile__links-item--orders">
+                <a href="#" class="profile__links-link">Заказы</a>
+              </li>
+              <li class="profile__links-item profile__links-item--favourite">
+                <a href="#" class="profile__links-link">Избранное</a>
+              </li>
+              <li class="profile__links-item profile__links-item--basket">
+                <a href="#" class="profile__links-link">Корзина</a>
+              </li>
+              <li class="profile__links-item profile__links-item--notify">
+                <a href="#" class="profile__links-link">Уведомления</a>
+              </li>
+            </ul>
+            <h4 class="profile__services-title">Сервисы</h4>
+            <ul class="profile__services">
+              <li class="profile__services-item">
+                <a href="privilege.php" class="profile__services-link">
                   <img
-                    src="img/catalog/inserts/brilliant.png"
+                    src="img/profile-page/privilege.jpg"
                     alt=""
-                    class="inserts__item-img"
+                    class="profile__services-img"
                   />
-                  <h4 class="inserts__item-title">Бриллиант</h4>
                 </a>
               </li>
-              <li class="inserts__item">
-                <a href="amethyst.php" class="inserts__item-link">
+              <li class="profile__services-item">
+                <a href="tradein.php" class="profile__services-link">
                   <img
-                    src="img/catalog/inserts/amethyst.png"
+                    src="img/profile-page/trade-in.jpg"
                     alt=""
-                    class="inserts__item-img"
+                    class="profile__services-img"
                   />
-                  <h4 class="inserts__item-title">Аметист</h4>
                 </a>
               </li>
-              <li class="inserts__item">
-                <a href="ruby.php" class="inserts__item-link">
+              <li class="profile__services-item">
+                <a href="service.php" class="profile__services-link">
                   <img
-                    src="img/catalog/inserts/ruby.png"
+                    src="img/profile-page/service.jpg"
                     alt=""
-                    class="inserts__item-img"
+                    class="profile__services-img"
                   />
-                  <h4 class="inserts__item-title">Рубин</h4>
-                </a>
-              </li>
-              <li class="inserts__item">
-                <a href="sapphire.php" class="inserts__item-link">
-                  <img
-                    src="img/catalog/inserts/sapphire.png"
-                    alt=""
-                    class="inserts__item-img"
-                  />
-                  <h4 class="inserts__item-title">Сапфир</h4>
                 </a>
               </li>
             </ul>
-          </section>
+            <ul class="profile__socials">
+              <li class="profile__socials-item profile__socials-item--telegram">
+                <a href="#" class="profile__socials-link">Telegram</a>
+              </li>
+              <li class="profile__socials-item profile__socials-item--whatsapp">
+                <a href="#" class="profile__socials-link">WhatsApp</a>
+              </li>
+              <li class="profile__socials-item profile__socials-item--phone">
+                <a href="tel:+78007710105 " class="profile__socials-link"
+                  >8 800 771 01 05
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="profile__footer">
+            <a href="index.php" class="profile__footer-link"
+              >На главную страницу</a
+            >
+            <a href="#" class="profile__footer-link">Выйти</a>
+          </div>
         </div>
       </main>
       <footer class="footer-page">

@@ -4,7 +4,7 @@ let numOfBackground = 1;
 function headerBcgChanger() {
   $('.header').css(
     'background',
-    `url('../img/header-slider/${numOfBackground.toString()}.jpg') no-repeat`
+    `url('img/header-slider/${numOfBackground.toString()}.jpg') no-repeat`
   );
   $('.header').css('background-size', 'cover');
 
