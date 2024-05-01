@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Проверяем, авторизован ли пользователь
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
+    // Пользователь авторизован, скрываем кнопку авторизации
+    $isLoggedIn = true;
+} else {
+    $isLoggedIn = false;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -28,7 +40,8 @@
                 >Украшения на заказ</a
               >
               <div class="header-page__right-block_account">
-                <a href="#" class="header-page__right-favourite"
+                <?php if($isLoggedIn): ?>
+                <a href="favourites.php" class="header-page__right-favourite"
                   ><svg
                     width="20"
                     height="19"
@@ -62,7 +75,7 @@
                     />
                   </svg>
                 </a>
-                <a href="preauth.php" class="header-page__right-account">
+                <a href="profile.php" class="header-page__right-account">
                   <svg
                     width="18"
                     height="18"
@@ -79,6 +92,9 @@
                     />
                   </svg>
                 </a>
+            <?php else: ?>
+                <a href="preauth.php" class="auth__btn-page">Авторизация</a>
+            <?php endif; ?>
               </div>
             </div>
           </div>
@@ -101,27 +117,118 @@
       </header>
       <main class="main">
         <div class="profile-edit__wrapper">
-          <form class="profile-edit__form">
+        <?php
+            // Проверяем, авторизован ли пользователь
+            if(isset($_SESSION['userId'])) {
+                $userId = $_SESSION['userId'];
+
+                // Подключение к базе данных
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "sova";
+
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Проверка соединения
+                if ($conn->connect_error) {
+                    die("Ошибка подключения: " . $conn->connect_error);
+                }
+
+                // SQL запрос для выборки данных пользователя
+                $sql = "SELECT * FROM users WHERE id = $userId";
+
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                  // Вывод данных пользователя
+                  $row = $result->fetch_assoc();
+                  $userId = $row['id'];
+                  $userName = $row['lastName'] . ' ' . $row['firstName']; 
+                  echo '
+                  <form class="profile-edit__form" action="update-profile.php" method="post">
+                  <div class="profile-edit__top">
+                    <h2 class="profile-edit__title">МОИ ДАННЫЕ</h2>
+                    <label class="profile-edit__label">
+                      Имя
+                      <input placeholder="'.$row['firstName'].'" type="text" id="firstName" name="firstName" class="profile-edit__input" required />
+                    </label>
+                    <label class="profile-edit__label">
+                      Фамилия
+                      <input placeholder="'.$row['lastName'].'" type="text" id="lastName" name="lastName" class="profile-edit__input" required />
+                    </label>
+                  </div>
+                  <div class="profile-edit__bottom">
+                    <div class="profile-edit__bottom-left">
+                      <label class="profile-edit__label">
+                        Дата рождения
+                        <input placeholder="'.$row['dateOfBirth'].'" type="text" id="dateOfBirth" name="dateOfBirth" class="profile-edit__input" required />
+                      </label>
+                      <label class="profile-edit__label">
+                        Номер телефона
+                        <input placeholder="'.$row['phone'].'" type="text" id="phone" name="phone" class="profile-edit__input" required />
+                      </label>
+                    </div>
+                    <div class="profile-edit__bottom-right">
+                      <h4 class="profile-edit__bottom-right-title">Пол</h4>
+                      <label class="profile-edit__gender-label">
+                        М
+                        <input
+                          type="radio"
+                          class="profile-edit__gender-radio"
+                          name="gender"
+                          value="man"
+                        />
+                      </label>
+                      <label class="profile-edit__gender-label">
+                        Ж
+                        <input
+                          type="radio"
+                          class="profile-edit__gender-radio"
+                          name="gender"
+                          value="woman"
+                        />
+                      </label>
+                    </div>
+                  </div>
+                  <div class="profile-edit__btnbox">
+                    <button type="submit" class="profile-edit__save">
+                      Сохранить
+                    </button>
+                  </div>
+                </form>
+                  ';
+                } else {
+                    echo "Пользователь не найден.";
+                }
+
+                $conn->close();
+            } else {
+                echo '<span class="acc__err">Пользователь не авторизован.</span>';
+            }
+            ?>
+        
+        <!-- <form class="profile-edit__form">
             <div class="profile-edit__top">
               <h2 class="profile-edit__title">МОИ ДАННЫЕ</h2>
               <label class="profile-edit__label">
                 Имя
-                <input type="text" class="profile-edit__input" required />
+                <input type="text" id="firstName" name="firstName" class="profile-edit__input" required />
               </label>
               <label class="profile-edit__label">
                 Фамилия
-                <input type="text" class="profile-edit__input" required />
+                <input type="text" id="lastName" name="lastName" class="profile-edit__input" required />
               </label>
             </div>
             <div class="profile-edit__bottom">
               <div class="profile-edit__bottom-left">
                 <label class="profile-edit__label">
                   Дата рождения
-                  <input type="text" class="profile-edit__input" required />
+                  <input type="text" id="dateOfBirth" name="dateOfBirth" class="profile-edit__input" required />
                 </label>
                 <label class="profile-edit__label">
                   Номер телефона
-                  <input type="text" class="profile-edit__input" required />
+                  <input type="text" id="phone" name="phone" class="profile-edit__input" required />
                 </label>
               </div>
               <div class="profile-edit__bottom-right">
@@ -149,7 +256,7 @@
                 Сохранить
               </button>
             </div>
-          </form>
+          </form> -->
         </div>
       </main>
       <footer class="footer-page">
@@ -187,3 +294,4 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </html>
+

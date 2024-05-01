@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Проверяем, авторизован ли пользователь
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
+    // Пользователь авторизован, скрываем кнопку авторизации
+    $isLoggedIn = true;
+} else {
+    $isLoggedIn = false;
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -28,7 +39,8 @@
                 >Украшения на заказ</a
               >
               <div class="header-page__right-block_account">
-                <a href="#" class="header-page__right-favourite"
+                <?php if($isLoggedIn): ?>
+                <a href="favourites.php" class="header-page__right-favourite"
                   ><svg
                     width="20"
                     height="19"
@@ -62,7 +74,7 @@
                     />
                   </svg>
                 </a>
-                <a href="preauth.php" class="header-page__right-account">
+                <a href="profile.php" class="header-page__right-account">
                   <svg
                     width="18"
                     height="18"
@@ -79,6 +91,9 @@
                     />
                   </svg>
                 </a>
+            <?php else: ?>
+                <a href="preauth.php" class="auth__btn-page">Авторизация</a>
+            <?php endif; ?>
               </div>
             </div>
           </div>
@@ -102,11 +117,50 @@
       <main class="main">
         <div class="profile__wrapper">
           <div class="profile__header">
-            <div class="profile__header-info">
-              <h1 class="profile__name">Фамилия Имя</h1>
-              <p class="profile__number">+7 (900) 154-65-00</p>
-            </div>
-            <a href="#" class="profile__header-edit">Редактировать профиль</a>
+          <?php
+            // Проверяем, авторизован ли пользователь
+            if(isset($_SESSION['userId'])) {
+                $userId = $_SESSION['userId'];
+
+                // Подключение к базе данных
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "sova";
+
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Проверка соединения
+                if ($conn->connect_error) {
+                    die("Ошибка подключения: " . $conn->connect_error);
+                }
+
+                // SQL запрос для выборки данных пользователя
+                $sql = "SELECT * FROM users WHERE id = $userId";
+
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                  // Вывод данных пользователя
+                  $row = $result->fetch_assoc();
+                  $userId = $row['id'];
+                  $userName = $row['lastName'] . ' ' . $row['firstName']; 
+                  echo '
+                    <div class="profile__header-info">
+                      <h1 class="profile__name">'.$userName.'</h1>
+                      <p class="profile__number">'.$row['phone'].'</p>
+                    </div>
+                      ';
+                } else {
+                    echo "Пользователь не найден.";
+                }
+
+                $conn->close();
+            } else {
+                echo '<span class="acc__err">Пользователь не авторизован.</span>';
+            }
+            ?>
+            <a href="profile-edit.php" class="profile__header-edit">Редактировать профиль</a>
           </div>
           <div class="profile__body">
             <ul class="profile__links">
@@ -117,7 +171,7 @@
                 <a href="#" class="profile__links-link">Заказы</a>
               </li>
               <li class="profile__links-item profile__links-item--favourite">
-                <a href="#" class="profile__links-link">Избранное</a>
+                <a href="favourites.php" class="profile__links-link">Избранное</a>
               </li>
               <li class="profile__links-item profile__links-item--basket">
                 <a href="#" class="profile__links-link">Корзина</a>
@@ -174,7 +228,7 @@
             <a href="index.php" class="profile__footer-link"
               >На главную страницу</a
             >
-            <a href="#" class="profile__footer-link">Выйти</a>
+            <a href="logout.php" class="profile__footer-link">Выйти</a>
           </div>
         </div>
       </main>

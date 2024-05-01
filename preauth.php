@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Проверяем, авторизован ли пользователь
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
+    // Пользователь авторизован, скрываем кнопку авторизации
+    $isLoggedIn = true;
+} else {
+    $isLoggedIn = false;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>

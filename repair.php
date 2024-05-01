@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Проверяем, авторизован ли пользователь
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
+    // Пользователь авторизован, скрываем кнопку авторизации
+    $isLoggedIn = true;
+} else {
+    $isLoggedIn = false;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -28,7 +40,8 @@
                 >Украшения на заказ</a
               >
               <div class="header-page__right-block_account">
-                <a href="#" class="header-page__right-favourite"
+                <?php if($isLoggedIn): ?>
+                <a href="favourites.php" class="header-page__right-favourite"
                   ><svg
                     width="20"
                     height="19"
@@ -62,7 +75,7 @@
                     />
                   </svg>
                 </a>
-                <a href="preauth.php" class="header-page__right-account">
+                <a href="profile.php" class="header-page__right-account">
                   <svg
                     width="18"
                     height="18"
@@ -79,6 +92,9 @@
                     />
                   </svg>
                 </a>
+            <?php else: ?>
+                <a href="preauth.php" class="auth__btn-page">Авторизация</a>
+            <?php endif; ?>
               </div>
             </div>
           </div>

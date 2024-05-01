@@ -49,6 +49,7 @@
 }
 .header-page__right-block {
   display: flex;
+  align-items: center;
 }
 .header-page__right-decor {
   line-height: 1.15;
@@ -58,6 +59,17 @@
   &:hover {
     text-decoration: underline;
   }
+}
+.auth__btn-page {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 12px;
+  line-height: 1.15;
+  font-weight: 600;
+  margin-right: 20px;
+  background: #0c62c7;
+  transition: all 0.3s;
+  color: #fff;
 }
 .header-page__right-block_account {
   margin-left: 25px;

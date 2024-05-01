@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Проверяем, авторизован ли пользователь
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
+    // Пользователь авторизован, скрываем кнопку авторизации
+    $isLoggedIn = true;
+} else {
+    $isLoggedIn = false;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -17,7 +29,7 @@
         <a href="index.php" class="header-page__logo header-page__logo--auth"
           >SOVÁ</a
         >
-        <form class="auth__registration">
+        <form method="post" action="register.php" class="auth__registration">
           <a href="preauth.php" class="auth__close"
             ><svg
               width="42"
@@ -35,12 +47,14 @@
           <h2 class="auth__registration-title">Регистрация</h2>
           <input
             type="text"
+            name="lastName"
             class="auth__registration-input"
             placeholder="Ваша фамилия"
             required
           />
           <input
             type="text"
+            name="firstName"
             class="auth__registration-input"
             placeholder="Ваша имя"
             required
@@ -49,6 +63,7 @@
             Телефон
             <input
               type="tel"
+              name="phone"
               class="auth__registration-input auth__registration-input--tel"
               placeholder="+7 (___) ___-__-__"
               required
