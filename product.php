@@ -17,10 +17,6 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Товар – Sova</title>
     <link rel="stylesheet" href="css/reset.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -58,7 +54,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                     />
                   </svg>
                 </a>
-                <a href="#" class="header-page__right-basket"
+                <a href="basket.php" class="header-page__right-basket"
                   ><svg
                     width="20"
                     height="20"
@@ -354,7 +350,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                         </li>
                       </ul>
                       <div class="product__btnbox">
-                        <a href="#" class="product__add">Добавить в корзину</a>
+                        <a href="#" id="addToCart" class="product__add">Добавить в корзину</a>
                         <a href="#" id="addToFavorites" class="product__fav"
                           ><svg
                             width="50"
@@ -678,7 +674,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
     </div>
   </body>
   <script src="js/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/add-to-fav.js"></script>
+  <script src="js/add-to-cart.js"></script>
   <script src="js/main.js"></script>
 </html>

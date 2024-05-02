@@ -31,6 +31,7 @@ if(isset($_SESSION['userId'])) {
 
     if ($conn->query($sql) === TRUE) {
         echo "Информация о пользователе успешно обновлена";
+        header("Location: profile.php");
     } else {
         echo "Ошибка при обновлении информации о пользователе: " . $conn->error;
     }

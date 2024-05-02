@@ -58,7 +58,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                     />
                   </svg>
                 </a>
-                <a href="#" class="header-page__right-basket"
+                <a href="basket.php" class="header-page__right-basket"
                   ><svg
                     width="20"
                     height="20"
@@ -119,7 +119,66 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
         <div class="basket__wrapper">
           <h2 class="basket__title">Корзина</h2>
           <ul class="basket__inner">
-            <li class="basket__inner-item">
+          <?php
+          // Замените параметры подключения к вашей базе данных
+          $servername = "localhost";
+          $username = "root";
+          $password = "";
+          $dbname = "sova";
+
+          // Создаем подключение к базе данных
+          $conn = new mysqli($servername, $username, $password, $dbname);
+
+          // Проверяем соединение
+          if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+          }
+
+          // Id авторизованного пользователя
+          $userId = $_SESSION['userId']; // Замените этот ID на реальный ID пользователя
+
+          // Выбираем избранные товары для данного пользователя
+          $sql = "SELECT g.id, g.name, g.image, g.price, b.count FROM goods g
+                  INNER JOIN basket b ON g.id = b.goodsId
+                  WHERE b.userId = $userId;"; // Фильтр по userId
+          $result = $conn->query($sql);
+
+          if ($result->num_rows > 0) {
+              // Выводим каждый избранный товар
+              while($row = $result->fetch_assoc()) {
+                  echo '
+                  <li class="basket__inner-item">
+                    <img src="'.$row["image"].'" alt="" class="basket__inner-img" />
+                    <div class="basket__inner-info">
+                      <h4 class="basket__inner-title">
+                      '.$row["name"].'
+                      </h4>
+                      <div class="basket__innet-details">
+                        <div class="basket__inner-price">
+                          <p class="basket__inner-price_current">'.$row["price"].' ₽</p>
+                          <div class="basket__inner-price_salebox">
+                            <p class="basket__inner-price_old">9990 ₽</p>
+                            <span class="basket__inner-price_sale">-60%</span>
+                          </div>
+                        </div>
+                        <div class="basket__inner-controls">
+                          <p class="basket__inner-count">'.$row["count"].'шт</p>
+                          <a href="#" count="'.$row["count"].'" name="'.$row["id"].'" class="basket__inner-del">
+                            <img src="img/icons/del-from-basket.png" alt="" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  ';
+              }
+          } else {
+              echo "Пользователь не имеет товаров в корзине.";
+          }
+
+          $conn->close();
+          ?>
+          <!-- <li class="basket__inner-item">
               <img src="img/Photoroom.png" alt="" class="basket__inner-img" />
               <div class="basket__inner-info">
                 <h4 class="basket__inner-title">
@@ -233,7 +292,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                   </div>
                 </div>
               </div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </main>
@@ -270,5 +329,6 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
   </body>
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/del-from-cart.js"></script>
   <script src="js/main.js"></script>
 </html>

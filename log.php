@@ -31,16 +31,17 @@ if ($result->num_rows > 0) {
     $userId = $row['id']; // предполагая, что у пользователя есть поле 'id' в таблице
     $userName = $row['lastName'] . ' ' . $row['firstName'];
     
-    echo "Авторизация успешна! Добро пожаловать, $userName!";
-
     // Сохраняем информацию об авторизованном пользователе в сессии
     $_SESSION['loggedIn'] = true;
     $_SESSION['userId'] = $userId;
 
-    // Добавляем JavaScript код для сохранения userId в localStorage
+    // Добавляем JavaScript код для сохранения userId в localStorage и редиректа через 5 секунд
     echo "<script>";
     echo "localStorage.setItem('userId', '$userId');";
+    echo "setTimeout(function() { window.location.href = 'index.php'; }, 5000);";
     echo "</script>";
+    
+    echo "Авторизация успешна! Добро пожаловать, $userName! Вы будете перенаправлены на главную страницу через 5 секунд.";
 } else {
     echo "Ошибка: Неверные данные для авторизации.";
 }

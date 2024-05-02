@@ -58,7 +58,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                   />
                 </svg>
               </a>
-              <a href="#" class="header__right-basket"
+              <a href="basket.php" class="header__right-basket"
                 ><svg
                   width="20"
                   height="20"

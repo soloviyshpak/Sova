@@ -1,20 +1,16 @@
 <?php
+// Инициализация сессии
 session_start();
-
-// Проверяем, авторизован ли пользователь
-if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
-    // Пользователь уже авторизован, перенаправляем его на главную страницу
-    header("Location: index.php");
-    exit;
-}
 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "sova";
 
+// Подключение к базе данных
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+// Проверка соединения
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -26,7 +22,9 @@ $phone = $_POST['phone'];
 $sql = "INSERT INTO users (firstName, lastName, phone) VALUES ('$firstName', '$lastName', '$phone')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Регистрация прошла успешно!";
+    // Редирект на index.php, если регистрация прошла успешно
+    header("Location: index.php");
+    exit;
 } else {
     echo "Ошибка: " . $sql . "<br>" . $conn->error;
 }
