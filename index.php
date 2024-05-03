@@ -805,5 +805,6 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
   </body>
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/sliders.js"></script>
   <script src="js/main.js"></script>
 </html>

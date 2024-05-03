@@ -131,7 +131,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
               $query = "set names utf8mb4";
               $mysqli->query($query);
 
-              $query = "SELECT * FROM goods WHERE gender = 'Для женщин' LIMIT 12";
+              $query = "SELECT * FROM goods WHERE gender = 'Для женщин' AND brand = 'SOVA'";
               $results = $mysqli->query($query);
 
               while ($row = $results->fetch_assoc()) {
