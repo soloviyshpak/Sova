@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
           </head>
           <body>
             <header class="header__admin">
-              <a href="#" class="header__admin-logo">SOVÁ</a>
+              <a href="admin.php" class="header__admin-logo">SOVÁ</a>
             </header>
             <form action="add_good.php" method="post" class="admin__add-page" enctype="multipart/form-data">
               <label href="#" class="add__photo">

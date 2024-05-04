@@ -505,7 +505,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
         </section>
         <section class="cosmos">
           <h2 class="cosmos__title">Cosmos</h2>
-          <div class="cosmos__content">
+          <a href="cosmos.php" class="cosmos__content">
             <div class="cosmos__content-item">
               <img src="img/cosmos/1.jpg" alt="" />
             </div>
@@ -515,7 +515,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
             <div class="cosmos__content-item">
               <img src="img/cosmos/3.jpg" alt="" />
             </div>
-          </div>
+          </a>
         </section>
         <section class="brilliants">
           <div class="container">

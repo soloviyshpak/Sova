@@ -127,7 +127,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
         </section>
         <section class="order">
           <div class="catalog__container">
-            <form class="order__form">
+            <form action="order_add.php" method="post" class="order__form">
               <h2 class="order__title">
                 Оставьте заявку на создание уникального украшения
               </h2>
@@ -135,6 +135,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                 <h5 class="order__form-title">Имя*</h5>
                 <input
                   type="text"
+                  name="name"
                   class="order__form-input"
                   required
                   placeholder="Иван Иванов"
@@ -154,6 +155,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                 <h5 class="order__form-title">E-mail*</h5>
                 <input
                   type="email"
+                  name="email"
                   class="order__form-input"
                   required
                   placeholder="ivanov@email.ru"
@@ -163,6 +165,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                 <h5 class="order__form-title">Бюджет на украшение</h5>
                 <input
                   type="number"
+                  name="budget"
                   class="order__form-input"
                   placeholder="Минимальный заказ - от 50 000 ₽"
                 />
@@ -171,6 +174,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                 <h5 class="order__form-title">Коментарий</h5>
                 <textarea
                   class="order__form-textarea"
+                  name="comment"
                   cols="30"
                   rows="10"
                   placeholder="Подробно опишите ваши пожелания по изделию или вставьте сюда ссылку на изделие"
