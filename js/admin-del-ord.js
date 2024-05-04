@@ -1,4 +1,4 @@
-// del from base
+// del from orders
 $(document).ready(function () {
   $('.admin__goods-del_link').on('click', function (e) {
     e.preventDefault();
@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $.ajax({
       type: 'POST',
-      url: 'del_good.php', // Файл для обработки запроса удаления
+      url: 'del_order.php', // Файл для обработки запроса удаления
       data: { itemId: itemId },
       success: function (response) {
         location.reload();

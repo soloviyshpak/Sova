@@ -25,7 +25,7 @@ die("Connection failed: " . $conn->connect_error);
 }
 
 // Получаем данные пользователя из базы данных
-$sql = "SELECT u.isAdmin, o.name, o.phone, o.email, o.budget, o.comment FROM users u
+$sql = "SELECT u.isAdmin, o.name, o.id, o.phone, o.email, o.budget, o.comment FROM users u
 JOIN orders o WHERE u.id = $userId";
 $result = $conn->query($sql);
 
@@ -60,9 +60,10 @@ echo '
 <a href="tel:'.$row["phone"].'" class="admin__orders-phone">Телефон: '.$row["phone"].'</a>
 <a href="mailto:'.$row["email"].'" class="admin__orders-email">E-Mail: '.$row["email"].'</a>
 <p class="admin__orders-money">Бюджет: '.$row["budget"].' р.</p>
-<p class="admin__orders-comment">
-Комментарий: <br>'.$row["comment"].'
-</p>
+<p class="admin__orders-comment">Комментарий: <br>'.$row["comment"].'</p>
+<a href="#" name="'.$row["id"].'" class="admin__goods-del_link">
+  <span class="admin__goods-del"></span>
+</a>
 </li>
 ';
 } while($row = $result->fetch_assoc());
@@ -71,6 +72,7 @@ echo '</ul>
 </section>
 </body>
 <script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/admin-del-ord.js"></script>
 <script src="js/admin.js"></script>
 <script src="js/main.js"></script>
 </html>

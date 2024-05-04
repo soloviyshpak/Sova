@@ -300,6 +300,12 @@
   border: 1px solid #000;
   border-radius: 22px;
   padding: 26px 42px;
+  position: relative;
+
+  .admin__goods-del_link {
+    top: 15px;
+    right: 15px;
+  }
 }
 .admin__orders-name {
   font-weight: 300;

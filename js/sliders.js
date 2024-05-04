@@ -25,3 +25,12 @@ var swiper = new Swiper('.brilliants__slider', {
     prevEl: '.brilliants__slide-prev',
   },
 });
+
+// Collection page slider
+var swiper = new Swiper('.collection__header-slider', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.collection__header-slider-next',
+    prevEl: '.collection__header-slider-prev',
+  },
+});
