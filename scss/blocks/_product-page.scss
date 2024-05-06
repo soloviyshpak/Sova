@@ -35,6 +35,12 @@
 }
 .product__specs {
 }
+.product__spec::before {
+  content: '....................................................';
+  display: inline-block;
+  width: 275px; /* настройте желаемую ширину */
+  white-space: nowrap;
+}
 .product__specs-item {
   font-weight: 300;
   font-size: 24px;

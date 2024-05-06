@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+// Проверяем, авторизован ли пользователь
+if (!isset($_SESSION['userId'])) {
+    echo "Ошибка: Пользователь не авторизован";
+    exit;
+}
+
 $goodsId = $_POST['goodsId'];
 $userId = $_POST['userId'];
 

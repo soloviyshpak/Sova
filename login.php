@@ -64,6 +64,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
             <input
               type="tel"
               name="phone"
+              id="phone"
               class="auth__registration-input auth__registration-input--tel"
               placeholder="+7 (___) ___-__-__"
               required
@@ -76,7 +77,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
       </seciton>
     </div>
   </body>
-  <script src="js/jquery-3.7.1.min.js"></script>
-  <script src="https://unpkg.com/imask"></script>
-  <script src="js/main.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.9/jquery.inputmask.min.js"></script>
+    <script src="js/main.js"></script>
 </html>

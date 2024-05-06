@@ -26,12 +26,26 @@
   letter-spacing: 0.12em;
   margin-bottom: 26px;
 }
+.collection__header-slider_title--svoboda {
+  font-size: 64px;
+  color: #0e3764;
+}
+.collection__header-slider_title--pearl {
+  font-size: 64px;
+  color: #000;
+}
 .collection__header-slider_wrapper {
 }
 .collection__header-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 774px;
 }
 .collection__header-slide_img {
+  display: block;
   width: 410px;
+  margin: 0 auto;
 }
 .collection__header-slide_price {
   font-weight: 400;
@@ -81,6 +95,8 @@
   margin-top: 41px;
 }
 .collection__main-left-good-img {
+  display: block;
+  margin: 0 auto;
 }
 .collection__main-left-good-title {
   font-family: 'Inter';
@@ -127,7 +143,8 @@
 .collection__bottom-right-good {
 }
 .collection__bottom-right-good-img {
-  margin: 31px 0;
+  display: block;
+  margin: 31px auto;
 }
 .collection__bottom-right-good-title {
   font-family: 'Inter';

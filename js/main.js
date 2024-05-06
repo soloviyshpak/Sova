@@ -82,3 +82,38 @@ $('.profile-edit__gender-label').on('click', function () {
 
   $(this).addClass('profile-edit__gender-label--selected');
 });
+
+// Masks for forms
+// phone
+document.addEventListener('DOMContentLoaded', function () {
+  let phoneInput = document.getElementById('phone');
+  phoneInput.addEventListener('input', function (e) {
+    let x = e.target.value
+      .replace(/\D/g, '')
+      .match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+    e.target.value = !x[2]
+      ? x[1] === '+'
+        ? x[1]
+        : '+' + x[1]
+      : '+' +
+        x[1] +
+        '(' +
+        x[2] +
+        (x[3] ? ')' + x[3] : '') +
+        (x[4] ? '-' + x[4] : '') +
+        (x[5] ? '-' + x[5] : '');
+  });
+});
+
+// date
+document.addEventListener('DOMContentLoaded', function () {
+  let dateInput = document.getElementById('dateOfBirth');
+  dateInput.addEventListener('input', function (e) {
+    let x = e.target.value
+      .replace(/\D/g, '')
+      .match(/(\d{0,2})(\d{0,2})(\d{0,4})/);
+    e.target.value = !x[2]
+      ? x[1]
+      : x[1] + '.' + x[2] + (x[3] ? '.' + x[3] : '');
+  });
+});

@@ -64,6 +64,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
             <input
               type="tel"
               name="phone"
+              id="phone"
               class="auth__registration-input auth__registration-input--tel"
               placeholder="+7 (___) ___-__-__"
               required

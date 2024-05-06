@@ -99,14 +99,14 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
               <a href="catalog.php" class="header-page__second-catalog"
                 >КАТАЛОГ</a
               >
-              <a href="#" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
+              <a href="index.php#collections" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
             </div>
             <div class="header-page__second-right">
               <a href="premium.php" class="header-page__second-premium"
                 >PREMIUM</a
               >
               <a href="#" class="header-page__second-link">Акции</a>
-              <a href="#" class="header-page__second-link">Подарочная карта</a>
+              <a href="privilege.php" class="header-page__second-link">Подарочная карта</a>
             </div>
           </div>
         </div>
@@ -295,27 +295,27 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                       <ul class="product__specs">
                         <li class="product__specs-item">
                           Материал<span class="product__spec"
-                            >........'.$row["material"].'</span
+                            >'.$row["material"].'</span
                           >
                         </li>
                         <li class="product__specs-item">
                           Примерный вес<span class="product__spec"
-                            >..............................................'.$row["weight"].' г</span
+                            >'.$row["weight"].' г</span
                           >
                         </li>
                         <li class="product__specs-item">
                           Вставка<span class="product__spec"
-                            >....................'.$row['inserts'].'</span
+                            >'.$row['inserts'].'</span
                           >
                         </li>
                         <li class="product__specs-item">
                           Для кого<span class="product__spec"
-                            >...............................................'.$row["gender"].'</span
+                            >'.$row["gender"].'</span
                           >
                         </li>
                         <li class="product__specs-item">
                           Бренд<span class="product__spec"
-                            >........................................................................'.$row["brand"].'</span
+                            >'.$row["brand"].'</span
                           >
                         </li>
                       </ul>

@@ -103,14 +103,14 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
               <a href="catalog.php" class="header-page__second-catalog"
                 >КАТАЛОГ</a
               >
-              <a href="#" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
+              <a href="index.php#collections" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
             </div>
             <div class="header-page__second-right">
               <a href="premium.php" class="header-page__second-premium"
                 >PREMIUM</a
               >
               <a href="#" class="header-page__second-link">Акции</a>
-              <a href="#" class="header-page__second-link">Подарочная карта</a>
+              <a href="privilege.php" class="header-page__second-link">Подарочная карта</a>
             </div>
           </div>
         </div>

@@ -102,14 +102,14 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
               <a href="catalog.php" class="header-page__second-catalog"
                 >КАТАЛОГ</a
               >
-              <a href="#" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
+              <a href="index.php#collections" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
             </div>
             <div class="header-page__second-right">
               <a href="premium.php" class="header-page__second-premium"
                 >PREMIUM</a
               >
               <a href="#" class="header-page__second-link">Акции</a>
-              <a href="#" class="header-page__second-link">Подарочная карта</a>
+              <a href="privilege.php" class="header-page__second-link">Подарочная карта</a>
             </div>
           </div>
         </div>
@@ -168,13 +168,13 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                 <a href="#" class="profile__links-link">Коломна</a>
               </li>
               <li class="profile__links-item profile__links-item--orders">
-                <a href="#" class="profile__links-link">Заказы</a>
+                <a href="orders.php" class="profile__links-link">Заказы</a>
               </li>
               <li class="profile__links-item profile__links-item--favourite">
                 <a href="favourites.php" class="profile__links-link">Избранное</a>
               </li>
               <li class="profile__links-item profile__links-item--basket">
-                <a href="#" class="profile__links-link">Корзина</a>
+                <a href="basket.php" class="profile__links-link">Корзина</a>
               </li>
               <li class="profile__links-item profile__links-item--notify">
                 <a href="#" class="profile__links-link">Уведомления</a>

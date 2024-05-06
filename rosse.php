@@ -15,7 +15,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rosse – Sova</title>
+    <title>ROSSE – Sova</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link
       rel="stylesheet"
@@ -103,14 +103,14 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
               <a href="catalog.php" class="header-page__second-catalog"
                 >КАТАЛОГ</a
               >
-              <a href="#" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
+              <a href="index.php#collections" class="header-page__second-collection">КОЛЛЕКЦИИ</a>
             </div>
             <div class="header-page__second-right">
               <a href="premium.php" class="header-page__second-premium"
                 >PREMIUM</a
               >
               <a href="#" class="header-page__second-link">Акции</a>
-              <a href="#" class="header-page__second-link">Подарочная карта</a>
+              <a href="privilege.php" class="header-page__second-link">Подарочная карта</a>
             </div>
           </div>
         </div>
@@ -125,15 +125,15 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
               <div class="collection__header-slider_wrapper swiper-wrapper">
                 <div class="collection__header-slide swiper-slide">
                   <img src="img/collections/slider/rosse/1.png" alt="" class="collection__header-slide_img">
-                  <p class="collection__header-slide_price">3 996 ₽ </p>
+                  <p class="collection__header-slide_price">3 996 ₽</p>
                 </div>
                 <div class="collection__header-slide swiper-slide">
-                  <img src="img/collections/slider/rosse/1.png" alt="" class="collection__header-slide_img">
-                  <p class="collection__header-slide_price">3 996 ₽ </p>
+                  <img src="img/collections/slider/rosse/2.png" alt="" class="collection__header-slide_img">
+                  <p class="collection__header-slide_price">1 200 ₽</p>
                 </div>
                 <div class="collection__header-slide swiper-slide">
-                  <img src="img/collections/slider/rosse/1.png" alt="" class="collection__header-slide_img">
-                  <p class="collection__header-slide_price">3 996 ₽ </p>
+                  <img src="img/collections/slider/rosse/5.png" alt="" class="collection__header-slide_img">
+                  <p class="collection__header-slide_price">3 600 ₽</p>
                 </div>
               </div>
             </div>
@@ -187,9 +187,9 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
             <h4 class="collection__main-left-title">В ЛЁГКОМ СТИЛЕ</h4>
             <div class="collection__main-left-good">
               <img src="img/collections/slider/rosse/2.png" alt="" class="collection__main-left-good-img">
-              <h4 class="collection__main-left-good-title">Кольцо из серебра</h4>
+              <a href="product.php?id=152" class="collection__main-left-good-title">Кольцо из серебра</a>
               <div class="collection__main-left-good-bottom">
-                <a href="#" class="collection__main-left-good-cart">
+                <a href="#" name="152" class="collection__main-left-good-cart addToCart">
                   <img src="img/icons/buttons/plus.svg" width="80" alt="">
                 </a>
                 <p class="collection__main-left-good-price">1 200 ₽</p>
@@ -207,7 +207,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
               <h4 class="collection__bottom-right-good-title">Колье из серебра с фианитом</h4>
               <div class="collection__bottom-right-good-bottom">
                 <p class="collection__bottom-right-good-price">3 600 ₽ </p>
-                <a href="#" class="collection__bottom-right-good-cart">
+                <a href="#" name="153" class="collection__bottom-right-good-cart addToCart">
                   <img src="img/icons/buttons/plus.svg" width="80" alt="">
                 </a>
               </div>
@@ -250,5 +250,6 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/sliders.js"></script>
+  <script src="js/add-to-cart-collection.js"></script>
   <script src="js/main.js"></script>
 </html>

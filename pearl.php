@@ -15,7 +15,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Бриллиант – Sova</title>
+    <title>PEARL – Sova</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link
       rel="stylesheet"
@@ -116,38 +116,105 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
         </div>
       </header>
       <main class="main">
-        <div class="product__container">
-          <a href="#" class="categories-btn">Смотреть все категории>></a>
-          <ul class="products__list">
-            <?php
-              $dbUser = 'root';
-              $dbName = 'sova';
-              $dbPass = '';
-              $mysqli = new mysqli('localhost', $dbUser, $dbPass, $dbName);
-              if ($mysqli->connect_error) {
-                  die('Ошибка подключения (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
-              }
-
-              $query = "set names utf8mb4";
-              $mysqli->query($query);
-
-              $query = "SELECT * FROM goods WHERE inserts = 'Бриллиант'";
-              $results = $mysqli->query($query);
-
-              while ($row = $results->fetch_assoc()) {
-                  echo '
-                  <li class="product__item">
-                  <a href="product.php?id='. $row["id"] .'" class="product__item-link">
-                          <img src="' . $row["image"] . '" alt="" class="product__item-preview" />
-                          <p class="product__item-price">' . $row["price"] . ' р</p>
-                          <h4 class="product__item-title">' . $row["name"] . '</h4>
-                      </a>
-                  </li>
-                  ';
-            }
-            ?>
-          </ul>
-        </div>
+      <div class="container-collection">
+        <section class="collection__header">
+          <img src="img/collections/3.jpg" alt="" class="collection__header-author">
+          <div class="collection__header-preslider">
+            <div class="collection__header-slider swiper">
+              <h4 class="collection__header-slider_title collection__header-slider_title--pearl">PEARL</h4>
+              <div class="collection__header-slider_wrapper swiper-wrapper">
+                <div class="collection__header-slide swiper-slide">
+                  <img src="img/collections/slider/pearl/1.png" alt="" class="collection__header-slide_img">
+                  <p class="collection__header-slide_price">40 000 ₽</p>
+                </div>
+                <div class="collection__header-slide swiper-slide">
+                  <img src="img/collections/slider/pearl/2.png" alt="" class="collection__header-slide_img">
+                  <p class="collection__header-slide_price">72 000 ₽</p>
+                </div>
+                <div class="collection__header-slide swiper-slide">
+                  <img src="img/collections/slider/pearl/5.png" alt="" class="collection__header-slide_img">
+                  <p class="collection__header-slide_price">29 200 ₽</p>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="collection__header-slider-prev">
+                <svg
+                width="11"
+                height="18"
+                viewBox="0 0 11 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.6108 2.80529L4.41607 8.99999L10.6108 15.1947L8.69433 17.0976L0.59668 8.99999L8.69433 0.902344L10.6108 2.80529Z"
+                  fill="black"
+                  fill-opacity="0.6"
+                />
+              </svg>
+            </a>
+            <a href="#" class="collection__header-slider-next"
+              ><svg
+                width="36"
+                height="36"
+                viewBox="0 0 36 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g opacity="0.6">
+                  <rect
+                    width="36"
+                    height="36"
+                    rx="18"
+                    fill="white"
+                    fill-opacity="0.6"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.3796 24.1947L19.5743 18L13.3796 11.8053L15.2961 9.90234L23.3937 18L15.2961 26.0976L13.3796 24.1947Z"
+                    fill="black"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="collection__main">
+          <div class="collection__main-left">
+            <p class="collection__main-left-subtitle">Украшения из серебра</p>
+            <h4 class="collection__main-left-title">В ЛЁГКОМ СТИЛЕ</h4>
+            <div class="collection__main-left-good">
+              <img src="img/collections/slider/pearl/2.png" alt="" class="collection__main-left-good-img">
+              <h4 class="collection__main-left-good-title">Брошь из золота с жемчугом и фианитами</h4>
+              <div class="collection__main-left-good-bottom">
+                <a href="#" name="159" class="collection__main-left-good-cart addToCart">
+                  <img src="img/icons/buttons/plus.svg" width="80" alt="">
+                </a>
+                <p class="collection__main-left-good-price">72 000 ₽</p>
+              </div>
+            </div>
+          </div>
+          <img src="img/collections/slider/pearl/3.jpg" class="collection__main-right"></img>
+        </section>
+        <section class="collection__bottom">
+          <img src="img/collections/slider/pearl/4.jpg" alt="" class="collection__bottom-left">
+          <div class="collection__bottom-right">
+            <h4 class="collection__bottom-right-title">БОЛЬШЕ СВОБОДЫ</h4>
+            <div class="collection__bottom-right-good">
+              <img src="img/collections/slider/pearl/5.png" alt="" class="collection__bottom-right-good-img">
+              <h4 class="collection__bottom-right-good-title">Кольцо из золота с жемчугом</h4>
+              <div class="collection__bottom-right-good-bottom">
+                <p class="collection__bottom-right-good-price">29 200 ₽</p>
+                <a href="#" name="160" class="collection__bottom-right-good-cart addToCart">
+                  <img src="img/icons/buttons/plus.svg" width="80" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>  
       </main>
       <footer class="footer-page">
         <div class="container">
@@ -182,5 +249,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
   </body>
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/sliders.js"></script>
+  <script src="js/add-to-cart-collection.js"></script>
   <script src="js/main.js"></script>
 </html>

@@ -151,6 +151,34 @@
     }
   }
 }
+.header__bcg-title {
+  width: 860px;
+  position: absolute;
+  top: 310px;
+  left: 151px;
+  background: #ffffff79;
+  border-radius: 15px;
+  white-space: nowrap;
+}
+.header__bcg-title_paragraph {
+  &:nth-child(1) {
+    font-size: 48px;
+    text-align: center;
+    color: #1f1f1f;
+  }
+  &:nth-child(2) {
+    font-weight: 600;
+    font-size: 48px;
+    text-align: center;
+    color: #2c2b2b;
+  }
+  &:nth-child(3) {
+    font-weight: 500;
+    font-size: 48px;
+    text-align: center;
+    color: #1f1f1f;
+  }
+}
 
 /* Header bottom */
 .header__bottom {

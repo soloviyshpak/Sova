@@ -202,6 +202,11 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
               </g>
             </svg>
           </a>
+          <div class="header__bcg-title">
+            <p class="header__bcg-title_paragraph">ВЕСЕННИЕ СКИДКИ В SOVA</p>
+            <p class="header__bcg-title_paragraph">− 60% НА ВСЁ</p>
+            <p class="header__bcg-title_paragraph">И ТЫ СИЯЕШЬ</p>
+          </div>
         </div>
         <div class="header__bottom">
           <a href="#" class="header__bottom-btn">Смотреть украшения</a>
@@ -418,7 +423,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
             </div>
           </div>
         </section>
-        <section class="collection">
+        <section class="collection" id="collections">
           <div class="container">
             <h2 class="collection__title">Коллекции</h2>
             <div class="collection__inner">
@@ -430,7 +435,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                       src="img/collections/1.jpg"
                       alt=""
                     />
-                    <a href="#" class="collection__slide-link">ROSSE & SOVA</a>
+                    <a href="rosse.php" class="collection__slide-link">ROSSE & SOVA</a>
                   </div>
                   <div class="collection__slide swiper-slide">
                     <img
@@ -438,15 +443,15 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                       src="img/collections/2.jpg"
                       alt=""
                     />
-                    <a href="#" class="collection__slide-link">SVOBODA</a>
+                    <a href="svoboda.php" class="collection__slide-link">SVOBODA</a>
                   </div>
                   <div class="collection__slide swiper-slide">
                     <img
                       class="collection__slide-img"
-                      src="img/collections/1.jpg"
+                      src="img/collections/3.jpg"
                       alt=""
                     />
-                    <a href="#" class="collection__slide-link">ROSSE & SOVA</a>
+                    <a href="pearl.php" class="collection__slide-link">PEARL</a>
                   </div>
                   <div class="collection__slide swiper-slide">
                     <img

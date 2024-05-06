@@ -15,7 +15,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Бриллиант – Sova</title>
+    <title>Заказы – Sova</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link
       rel="stylesheet"
@@ -116,36 +116,10 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
         </div>
       </header>
       <main class="main">
-        <div class="product__container">
-          <a href="#" class="categories-btn">Смотреть все категории>></a>
-          <ul class="products__list">
-            <?php
-              $dbUser = 'root';
-              $dbName = 'sova';
-              $dbPass = '';
-              $mysqli = new mysqli('localhost', $dbUser, $dbPass, $dbName);
-              if ($mysqli->connect_error) {
-                  die('Ошибка подключения (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
-              }
-
-              $query = "set names utf8mb4";
-              $mysqli->query($query);
-
-              $query = "SELECT * FROM goods WHERE inserts = 'Бриллиант'";
-              $results = $mysqli->query($query);
-
-              while ($row = $results->fetch_assoc()) {
-                  echo '
-                  <li class="product__item">
-                  <a href="product.php?id='. $row["id"] .'" class="product__item-link">
-                          <img src="' . $row["image"] . '" alt="" class="product__item-preview" />
-                          <p class="product__item-price">' . $row["price"] . ' р</p>
-                          <h4 class="product__item-title">' . $row["name"] . '</h4>
-                      </a>
-                  </li>
-                  ';
-            }
-            ?>
+        <div class="basket__wrapper">
+          <h2 class="basket__title">Заказы</h2>
+          <ul class="basket__inner">
+          Заказы отсутствуют.
           </ul>
         </div>
       </main>
@@ -182,5 +156,6 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
   </body>
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/del-from-cart.js"></script>
   <script src="js/main.js"></script>
 </html>

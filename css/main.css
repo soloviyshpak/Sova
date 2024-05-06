@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Inter */
 @font-face {
   font-family: "Inter";
@@ -268,6 +269,34 @@
   fill-opacity: 1;
 }
 
+.header__bcg-title {
+  width: 860px;
+  position: absolute;
+  top: 310px;
+  left: 151px;
+  background: rgba(255, 255, 255, 0.4745098039);
+  border-radius: 15px;
+  white-space: nowrap;
+}
+
+.header__bcg-title_paragraph:nth-child(1) {
+  font-size: 48px;
+  text-align: center;
+  color: #1f1f1f;
+}
+.header__bcg-title_paragraph:nth-child(2) {
+  font-weight: 600;
+  font-size: 48px;
+  text-align: center;
+  color: #2c2b2b;
+}
+.header__bcg-title_paragraph:nth-child(3) {
+  font-weight: 500;
+  font-size: 48px;
+  text-align: center;
+  color: #1f1f1f;
+}
+
 /* Header bottom */
 .header__bottom {
   display: flex;
@@ -492,6 +521,8 @@
 
 .collection__slide-img {
   border-radius: 68px;
+  width: 533px;
+  height: 533px;
 }
 
 .collection__slide-link {
@@ -2602,6 +2633,13 @@
   margin-bottom: 86px;
 }
 
+.product__spec::before {
+  content: "....................................................";
+  display: inline-block;
+  width: 275px; /* настройте желаемую ширину */
+  white-space: nowrap;
+}
+
 .product__specs-item {
   font-weight: 300;
   font-size: 24px;
@@ -2996,7 +3034,7 @@
 }
 
 .basket__inner-img {
-  height: 246px;
+  width: 282px;
 }
 
 .basket__inner-title {
@@ -3188,8 +3226,27 @@
   margin-bottom: 26px;
 }
 
+.collection__header-slider_title--svoboda {
+  font-size: 64px;
+  color: #0e3764;
+}
+
+.collection__header-slider_title--pearl {
+  font-size: 64px;
+  color: #000;
+}
+
+.collection__header-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 774px;
+}
+
 .collection__header-slide_img {
+  display: block;
   width: 410px;
+  margin: 0 auto;
 }
 
 .collection__header-slide_price {
@@ -3246,6 +3303,11 @@
   margin-top: 41px;
 }
 
+.collection__main-left-good-img {
+  display: block;
+  margin: 0 auto;
+}
+
 .collection__main-left-good-title {
   font-family: "Inter";
   margin-top: 21px;
@@ -3291,7 +3353,8 @@
 }
 
 .collection__bottom-right-good-img {
-  margin: 31px 0;
+  display: block;
+  margin: 31px auto;
 }
 
 .collection__bottom-right-good-title {
