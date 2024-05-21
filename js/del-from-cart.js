@@ -4,11 +4,12 @@ $(document).ready(function () {
 
     let itemId = Number($(this).attr('name'));
     let userId = localStorage.getItem('userId');
+    let size = $(this).attr('size');
 
     $.ajax({
       type: 'POST',
       url: 'del-from-cart.php', // Файл для обработки запроса удаления
-      data: { itemId: itemId, userId: userId },
+      data: { itemId: itemId, userId: userId, size: size },
       success: function (response) {
         location.reload();
       },

@@ -13,21 +13,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Получаем ID товара, который нужно удалить из избранного
+// Получаем ID товара, который нужно удалить из базы
 $itemId = $_POST['itemId']; 
 
-// Id авторизованного пользователя
-$userId = $_POST['userId']; // Замените этот ID на реальный ID пользователя
-
-// Размер товара
-$size = $_POST['size'];
-
 // Удаляем избранный товар из базы данных
-$sql = "DELETE FROM basket WHERE userId = $userId AND goodsId = $itemId AND size = $size"; // Удаляем запись из таблицы избранных товаров
+$sql = "UPDATE orders SET consideration = 'true' WHERE id = $itemId"; // Обновляем значение поля consideration
 if ($conn->query($sql) === TRUE) {
-    echo "Товар успешно удален из корзины";
+    echo "Значение поля consideration успешно обновлено";
 } else {
-    echo "Ошибка при удалении товара из корзины: " . $conn->error;
+    echo "Ошибка при обновлении значения поля consideration: " . $conn->error;
 }
 
 // Закрываем соединение

@@ -66,6 +66,13 @@
   background: #bd3232;
   border-radius: 9px;
 }
+.basket__inner-size {
+  color: #fff;
+  background: #000;
+  width: 50px;
+  text-align: center;
+  border-radius: 20px;
+}
 .basket__inner-controls {
   background: #f1f1f1;
   border-radius: 15px;
@@ -82,4 +89,21 @@
   color: #000;
 }
 .basket__inner-del {
+}
+.basket__inner-addToOrder {
+  display: block;
+  background: #257ae8;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  width: 300px;
+  padding: 10px 0;
+  border-radius: 8px;
+  margin: 50px auto 0;
+  transition: all 0.3s;
+
+  &:hover {
+    scale: 1.1;
+  }
 }

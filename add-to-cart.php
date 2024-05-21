@@ -10,6 +10,7 @@ if (!isset($_SESSION['userId'])) {
 
 $goodsId = $_POST['goodsId'];
 $userId = $_POST['userId'];
+$size = $_POST['size'];
 
 // Подключение к базе данных
 $servername = "localhost";
@@ -25,14 +26,14 @@ if ($conn->connect_error) {
 }
 
 // Проверяем, есть ли уже такой товар в корзине для данного пользователя
-$sql = "SELECT * FROM basket WHERE userId='$userId' AND goodsId='$goodsId'";
+$sql = "SELECT * FROM basket WHERE userId='$userId' AND goodsId='$goodsId' AND size='$size'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Если товар уже есть в корзине, увеличиваем значение поля "count" на 1
     $row = $result->fetch_assoc();
     $newCount = $row["count"] + 1;
-    $updateSql = "UPDATE basket SET count='$newCount' WHERE userId='$userId' AND goodsId='$goodsId'";
+    $updateSql = "UPDATE basket SET count='$newCount' WHERE userId='$userId' AND goodsId='$goodsId' AND size='$size'";
     if ($conn->query($updateSql) === TRUE) {
         echo "Количество товара в корзине успешно увеличено";
     } else {
@@ -40,7 +41,7 @@ if ($result->num_rows > 0) {
     }
 } else {
     // Если товара еще нет в корзине, добавляем новую запись
-    $addSql = "INSERT INTO basket (userId, goodsId, count) VALUES ('$userId', '$goodsId', 1)";
+    $addSql = "INSERT INTO basket (userId, goodsId, size, count) VALUES ('$userId', '$goodsId', '$size', 1)";
     if ($conn->query($addSql) === TRUE) {
         echo "Товар успешно добавлен в корзину";
     } else {

@@ -25,8 +25,8 @@ die("Connection failed: " . $conn->connect_error);
 }
 
 // Получаем данные пользователя из базы данных
-$sql = "SELECT u.isAdmin, o.id, o.userName, o.userPhone, o.goodImage, o.goodName, o.goodPrice, o.goodCount, o.goodSize, o.consideration FROM users u
-JOIN orders o WHERE u.id = $userId AND o.consideration IS NULL";
+$sql = "SELECT u.isAdmin, o.name, o.id, o.phone, o.email, o.budget, o.comment FROM users u
+JOIN decorders o WHERE u.id = $userId";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -49,31 +49,21 @@ echo '
 <a href="admin.php" class="header__admin-logo">SOVÁ</a>
 </header>
 <section class="admin__orders-page">
-<h2 class="admin__orders-title">Заказы</h2>
+<h2 class="admin__orders-title">Украшения на заказ</h2>
 <ul class="admin__orders-list">';
 
 // Выводим заказы
 do {
 echo '
-<li class="admin__orders-item admin__orders-item--other">
-<div class="admin__orders-userinfo">
-  <h2 class="admin__orders-username">'.$row["userName"].'</h2>
-  <p class="admin__orders-town">г. Москва</p>
-  <a href="tel:'.$row["userPhone"].'" class="admin__orders-phonenumber">'.$row["userPhone"].'</a>
-</div>
-<div class="admin__orders-good">
-  <img class="admin__order-good_img" src="'.$row["goodImage"].'" alt="">
-  <div class="admin__order-good_info">
-    <h2 class="admin__order-good_title">'.$row["goodName"].'</h2>
-    <p class="admin__order-good_price">'.$row["goodPrice"].' р.</p>
-    <div class="basket__inner-size">'.$row["goodSize"].'</div>
-    <p class="admin__order-good-count">Количество: '.$row["goodCount"].'</p>
-  </div>
-</div>
-<div class="admin__orders-controls">
-  <a href="#" class="admin__orders-controls_btn admin__orders-controls_btn--accept" name="'.$row["id"].'">Принять</a>
-  <a href="#" class="admin__orders-controls_btn admin__orders-controls_btn--dismiss" name="'.$row["id"].'">Отклонить</a>
-</div>
+<li class="admin__orders-item">
+<p class="admin__orders-name">Имя: '.$row["name"].'</p>
+<a href="tel:'.$row["phone"].'" class="admin__orders-phone">Телефон: '.$row["phone"].'</a>
+<a href="mailto:'.$row["email"].'" class="admin__orders-email">E-Mail: '.$row["email"].'</a>
+<p class="admin__orders-money">Бюджет: '.$row["budget"].' р.</p>
+<p class="admin__orders-comment">Комментарий: <br>'.$row["comment"].'</p>
+<a href="#" name="'.$row["id"].'" class="admin__goods-del_link">
+  <span class="admin__goods-del"></span>
+</a>
 </li>
 ';
 } while($row = $result->fetch_assoc());
@@ -82,7 +72,7 @@ echo '</ul>
 </section>
 </body>
 <script src="js/jquery-3.7.1.min.js"></script>
-<script src="js/admin-del-oth-ord.js"></script>
+<script src="js/admin-del-ord.js"></script>
 <script src="js/admin.js"></script>
 <script src="js/main.js"></script>
 </html>

@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $.ajax({
       type: 'POST',
-      url: 'del_order.php', // Файл для обработки запроса удаления
+      url: 'del_dec-order.php', // Файл для обработки запроса удаления
       data: { itemId: itemId },
       success: function (response) {
         location.reload();

@@ -36,7 +36,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
             </div>
             <a href="index.php" class="header-page__logo">SOVÁ</a>
             <div class="header-page__right-block">
-              <a href="order.php" class="header-page__right-decor"
+              <a href="dec-order.php" class="header-page__right-decor"
                 >Украшения на заказ</a
               >
               <div class="header-page__right-block_account">
@@ -138,7 +138,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
           $userId = $_SESSION['userId']; // Замените этот ID на реальный ID пользователя
 
           // Выбираем избранные товары для данного пользователя
-          $sql = "SELECT g.id, g.name, g.image, g.price, b.count FROM goods g
+          $sql = "SELECT g.id, g.name, g.image, g.price, b.count, b.size FROM goods g
                   INNER JOIN basket b ON g.id = b.goodsId
                   WHERE b.userId = $userId;"; // Фильтр по userId
           $result = $conn->query($sql);
@@ -161,9 +161,12 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                             <span class="basket__inner-price_sale">-60%</span>
                           </div>
                         </div>
+                        <div class="basket__inner-size">
+                          '.$row["size"].'
+                        </div>
                         <div class="basket__inner-controls">
                           <p class="basket__inner-count">'.$row["count"].'шт</p>
-                          <a href="#" count="'.$row["count"].'" name="'.$row["id"].'" class="basket__inner-del">
+                          <a href="#" count="'.$row["count"].'" name="'.$row["id"].'" size="'.$row["size"].'" class="basket__inner-del">
                             <img src="img/icons/del-from-basket.png" alt="" />
                           </a>
                         </div>
@@ -172,127 +175,15 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                   </li>
                   ';
               }
+              echo '
+                <a href="#" class="basket__inner-addToOrder">Заказать</a>
+              ';
           } else {
               echo "Пользователь не имеет товаров в корзине.";
           }
 
           $conn->close();
           ?>
-          <!-- <li class="basket__inner-item">
-              <img src="img/Photoroom.png" alt="" class="basket__inner-img" />
-              <div class="basket__inner-info">
-                <h4 class="basket__inner-title">
-                  Брошь из серебра с фианитами
-                </h4>
-                <div class="basket__innet-details">
-                  <div class="basket__inner-price">
-                    <p class="basket__inner-price_current">3996 ₽</p>
-                    <div class="basket__inner-price_salebox">
-                      <p class="basket__inner-price_old">9990 ₽</p>
-                      <span class="basket__inner-price_sale">-60%</span>
-                    </div>
-                  </div>
-                  <div class="basket__inner-controls">
-                    <p class="basket__inner-count">1 шт</p>
-                    <a href="#" class="basket__inner-del">
-                      <img src="img/icons/del-from-basket.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="basket__inner-item">
-              <img src="img/Photoroom.png" alt="" class="basket__inner-img" />
-              <div class="basket__inner-info">
-                <h4 class="basket__inner-title">
-                  Брошь из серебра с фианитами
-                </h4>
-                <div class="basket__innet-details">
-                  <div class="basket__inner-price">
-                    <p class="basket__inner-price_current">3996 ₽</p>
-                    <div class="basket__inner-price_salebox">
-                      <p class="basket__inner-price_old">9990 ₽</p>
-                      <span class="basket__inner-price_sale">-60%</span>
-                    </div>
-                  </div>
-                  <div class="basket__inner-controls">
-                    <p class="basket__inner-count">1 шт</p>
-                    <a href="#" class="basket__inner-del">
-                      <img src="img/icons/del-from-basket.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="basket__inner-item">
-              <img src="img/Photoroom.png" alt="" class="basket__inner-img" />
-              <div class="basket__inner-info">
-                <h4 class="basket__inner-title">
-                  Брошь из серебра с фианитами
-                </h4>
-                <div class="basket__innet-details">
-                  <div class="basket__inner-price">
-                    <p class="basket__inner-price_current">3996 ₽</p>
-                    <div class="basket__inner-price_salebox">
-                      <p class="basket__inner-price_old">9990 ₽</p>
-                      <span class="basket__inner-price_sale">-60%</span>
-                    </div>
-                  </div>
-                  <div class="basket__inner-controls">
-                    <p class="basket__inner-count">1 шт</p>
-                    <a href="#" class="basket__inner-del">
-                      <img src="img/icons/del-from-basket.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="basket__inner-item">
-              <img src="img/Photoroom.png" alt="" class="basket__inner-img" />
-              <div class="basket__inner-info">
-                <h4 class="basket__inner-title">
-                  Брошь из серебра с фианитами
-                </h4>
-                <div class="basket__innet-details">
-                  <div class="basket__inner-price">
-                    <p class="basket__inner-price_current">3996 ₽</p>
-                    <div class="basket__inner-price_salebox">
-                      <p class="basket__inner-price_old">9990 ₽</p>
-                      <span class="basket__inner-price_sale">-60%</span>
-                    </div>
-                  </div>
-                  <div class="basket__inner-controls">
-                    <p class="basket__inner-count">1 шт</p>
-                    <a href="#" class="basket__inner-del">
-                      <img src="img/icons/del-from-basket.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="basket__inner-item">
-              <img src="img/Photoroom.png" alt="" class="basket__inner-img" />
-              <div class="basket__inner-info">
-                <h4 class="basket__inner-title">
-                  Брошь из серебра с фианитами
-                </h4>
-                <div class="basket__innet-details">
-                  <div class="basket__inner-price">
-                    <p class="basket__inner-price_current">3996 ₽</p>
-                    <div class="basket__inner-price_salebox">
-                      <p class="basket__inner-price_old">9990 ₽</p>
-                      <span class="basket__inner-price_sale">-60%</span>
-                    </div>
-                  </div>
-                  <div class="basket__inner-controls">
-                    <p class="basket__inner-count">1 шт</p>
-                    <a href="#" class="basket__inner-del">
-                      <img src="img/icons/del-from-basket.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li> -->
           </ul>
         </div>
       </main>
@@ -330,5 +221,6 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/del-from-cart.js"></script>
+  <script src="js/add-to-order.js"></script>
   <script src="js/main.js"></script>
 </html>

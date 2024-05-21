@@ -13,21 +13,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Получаем ID товара, который нужно удалить из избранного
+// Получаем ID товара, который нужно удалить из базы
 $itemId = $_POST['itemId']; 
 
-// Id авторизованного пользователя
-$userId = $_POST['userId']; // Замените этот ID на реальный ID пользователя
-
-// Размер товара
-$size = $_POST['size'];
-
 // Удаляем избранный товар из базы данных
-$sql = "DELETE FROM basket WHERE userId = $userId AND goodsId = $itemId AND size = $size"; // Удаляем запись из таблицы избранных товаров
+$sql = "DELETE FROM decorders WHERE id = $itemId"; // Удаляем запись из таблицы избранных товаров
 if ($conn->query($sql) === TRUE) {
-    echo "Товар успешно удален из корзины";
+    echo "Заказ успешно удален из базы";
 } else {
-    echo "Ошибка при удалении товара из корзины: " . $conn->error;
+    echo "Ошибка при удалении заказа из базы: " . $conn->error;
 }
 
 // Закрываем соединение

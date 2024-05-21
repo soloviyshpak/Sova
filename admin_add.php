@@ -254,12 +254,6 @@ if ($result->num_rows > 0) {
                     >
                   </li>
                 </ul>
-                <div class="add__size">
-                  <h4 class="add__size-title">Размер, мм</h4>
-                  <a href="#" class="add__size-link"
-                    ><img src="img/icons/buttons/plus.svg" alt="" class="add__size-img"
-                  /></a>
-                </div>
                 <button type="submit" class="add__save">Сохранить</button>
               </div>
             </form>

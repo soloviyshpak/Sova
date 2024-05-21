@@ -56,6 +56,9 @@ if ($result->num_rows > 0) {
                         <a href="admin_orders.php" class="admin__menu-link">Заказы</a>
                       </li>
                       <li class="admin__menu-item">
+                        <a href="admin_dec-orders.php" class="admin__menu-link">Украшения на заказ</a>
+                      </li>
+                      <li class="admin__menu-item">
                         <a href="index.php" class="admin__menu-link">Просмотр сайта</a>
                       </li>
                     </ul>

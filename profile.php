@@ -35,7 +35,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
             </div>
             <a href="index.php" class="header-page__logo">SOVÁ</a>
             <div class="header-page__right-block">
-              <a href="order.php" class="header-page__right-decor"
+              <a href="dec-order.php" class="header-page__right-decor"
                 >Украшения на заказ</a
               >
               <div class="header-page__right-block_account">

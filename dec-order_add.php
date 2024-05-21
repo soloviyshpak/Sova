@@ -15,11 +15,11 @@ $budget = $_POST['budget'];
 $comment = $_POST['comment'];
 
 // Готовим SQL запрос для добавления данных в таблицу orders
-$sql = "INSERT INTO orders (name, phone, email, budget, comment) VALUES ('$name', '$phone', '$email', '$budget', '$comment')";
+$sql = "INSERT INTO decorders (name, phone, email, budget, comment) VALUES ('$name', '$phone', '$email', '$budget', '$comment')";
 
 // Проверяем успешность выполнения запроса
 if ($conn->query($sql) === TRUE) {
-  header("Location: order.php");
+  header("Location: dec-order.php");
 } else {
   echo "Ошибка при добавлении заявки: " . $conn->error;
 }
