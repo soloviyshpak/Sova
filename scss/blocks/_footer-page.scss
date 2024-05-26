@@ -2,6 +2,10 @@
   border-top: 1px solid #ccc;
   padding-top: 35px;
   padding-bottom: 30px;
+  @include media(1465px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 .footer-page__inner {
   display: flex;
@@ -41,6 +45,4 @@
   &:hover {
     scale: 1.1;
   }
-}
-.footer-page__socials-link {
 }

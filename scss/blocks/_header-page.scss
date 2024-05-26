@@ -1,14 +1,17 @@
 .header-page {
   padding-top: 17px;
   padding-bottom: 26px;
+
+  @include media(1465px) {
+    padding-left: 50px;
+    padding-right: 40px;
+  }
 }
 .header-page__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: rgba(0, 0, 0, 0.9);
-}
-.header-page__left-block {
 }
 .header-page__left-city {
   line-height: 1.15;

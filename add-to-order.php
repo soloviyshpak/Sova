@@ -24,8 +24,8 @@ if ($conn->connect_error) {
 }
 
 // Проверяем, есть ли уже такой товар в корзине для данного пользователя
-$sql = "INSERT INTO orders (userName, userPhone, goodImage, goodName, goodPrice, goodCount, goodSize)
-        SELECT CONCAT(u.firstName, ' ', u.lastName) AS userName, u.phone, g.image, g.name, g.price, b.count AS goodCount, b.size AS goodSize
+$sql = "INSERT INTO orders (userId, userName, userPhone, goodImage, goodName, goodPrice, goodCount, goodSize)
+        SELECT $userId AS userId, CONCAT(u.firstName, ' ', u.lastName) AS userName, u.phone, g.image, g.name, g.price, b.count AS goodCount, b.size AS goodSize
         FROM basket b
         JOIN users u ON b.userId = u.id
         JOIN goods g ON b.goodsId = g.id

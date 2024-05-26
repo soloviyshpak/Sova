@@ -50,7 +50,7 @@ echo '
 </header>
 <section class="admin__orders-page">
 <h2 class="admin__orders-title">Заказы</h2>
-<ul class="admin__orders-list">';
+<ul class="admin__orders-list admin__orders-list--other">';
 
 // Выводим заказы
 do {
@@ -66,7 +66,7 @@ echo '
   <div class="admin__order-good_info">
     <h2 class="admin__order-good_title">'.$row["goodName"].'</h2>
     <p class="admin__order-good_price">'.$row["goodPrice"].' р.</p>
-    <div class="basket__inner-size">'.$row["goodSize"].'</div>
+    <div class="basket__inner-size basket__inner-size--other">'.$row["goodSize"].'</div>
     <p class="admin__order-good-count">Количество: '.$row["goodCount"].'</p>
   </div>
 </div>

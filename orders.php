@@ -116,10 +116,57 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
         </div>
       </header>
       <main class="main">
-        <div class="basket__wrapper">
-          <h2 class="basket__title">Заказы</h2>
-          <ul class="basket__inner">
-          Заказы отсутствуют.
+        <div class="orders__wrapper">
+          <h2 class="orders__title">Заказы</h2>
+          <ul class="orders__inner">
+          <?php
+          // Замените параметры подключения к вашей базе данных
+          $servername = "localhost";
+          $username = "root";
+          $password = "";
+          $dbname = "sova";
+
+          // Создаем подключение к базе данных
+          $conn = new mysqli($servername, $username, $password, $dbname);
+
+          // Проверяем соединение
+          if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+          }
+
+          // Id авторизованного пользователя
+          $userId = $_SESSION['userId']; // Замените этот ID на реальный ID пользователя
+
+          // Выбираем избранные товары для данного пользователя
+          $sql = "SELECT * FROM orders WHERE userId = $userId;";
+          $result = $conn->query($sql);
+
+          if ($result->num_rows > 0) {
+              // Выводим каждый избранный товар
+              while($row = $result->fetch_assoc()) {
+                $considerationClass = ($row["consideration"] == "true") ? "orders__consideration--accept" : "orders__consideration--null";
+                echo '
+                <li class="orders__item">
+                    <div class="orders-good">
+                        <img class="orders__good-img" src="'.$row["goodImage"].'" alt="">
+                        <div class="orders__good-info">
+                            <h2 class="orders__good-title">'.$row["goodName"].'</h2>
+                            <p class="orders__good-price">'.$row["goodPrice"].' р.</p>
+                            <div class="basket__inner-size basket__inner-size--orders">'.$row["goodSize"].'</div>
+                            <p class="orders__good-count">Количество: '.$row["goodCount"].'</p>
+                        </div>
+                        <div class="orders-controls">
+                            <p class="orders__consideration '.$considerationClass.'">'.($row["consideration"] == "true" ? "Принято" : "На рассмотрении").'</p>
+                            <a href="#" class="orders-controls_dismiss" data-id="'.$row["id"].'">Отменить</a>
+                        </div>
+                    </li>';
+            }
+          } else {
+              echo "Пользователь не имеет заказов.";
+          }
+
+          $conn->close();
+          ?>
           </ul>
         </div>
       </main>
@@ -156,6 +203,127 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
   </body>
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/del-from-cart.js"></script>
+  <script src="js/del-user-order.js"></script>
   <script src="js/main.js"></script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+            <!-- <li class="orders__item">
+              <div class="orders-good">
+                <img class="orders__good-img" src="img/brilliant-page/11.png" alt="">
+                <div class="orders__good-info">
+                  <h2 class="orders__good-title">Что-то там из брилланта</h2>
+                  <p class="orders__good-price">30000 р.</p>
+                  <div class="basket__inner-size basket__inner-size--orders">20</div>
+                  <p class="orders__good-count">Количество: 2</p>
+                </div>
+              <div class="orders-controls">
+                <p class="orders__consideration orders__consideration--null">На рассмотрении</p>
+                <a href="#" class="orders-controls_dismiss" name="'.$row["id"].'">Отменить</a>
+              </div>
+            </li>
+            <li class="orders__item">
+              <div class="orders-good">
+                <img class="orders__good-img" src="img/brilliant-page/11.png" alt="">
+                <div class="orders__good-info">
+                  <h2 class="orders__good-title">Что-то там из брилланта</h2>
+                  <p class="orders__good-price">30000 р.</p>
+                  <div class="basket__inner-size basket__inner-size--orders">20</div>
+                  <p class="orders__good-count">Количество: 2</p>
+                </div>
+              <div class="orders-controls">
+                <p class="orders__consideration orders__consideration--null">На рассмотрении</p>
+                <a href="#" class="orders-controls_dismiss" name="'.$row["id"].'">Отменить</a>
+              </div>
+            </li>
+            <li class="orders__item">
+              <div class="orders-good">
+                <img class="orders__good-img" src="img/brilliant-page/11.png" alt="">
+                <div class="orders__good-info">
+                  <h2 class="orders__good-title">Что-то там из брилланта</h2>
+                  <p class="orders__good-price">30000 р.</p>
+                  <div class="basket__inner-size basket__inner-size--orders">20</div>
+                  <p class="orders__good-count">Количество: 2</p>
+                </div>
+              <div class="orders-controls">
+                <p class="orders__consideration orders__consideration--null">На рассмотрении</p>
+                <a href="#" class="orders-controls_dismiss" name="'.$row["id"].'">Отменить</a>
+              </div>
+            </li>
+            <li class="orders__item">
+              <div class="orders-good">
+                <img class="orders__good-img" src="img/brilliant-page/11.png" alt="">
+                <div class="orders__good-info">
+                  <h2 class="orders__good-title">Что-то там из брилланта</h2>
+                  <p class="orders__good-price">30000 р.</p>
+                  <div class="basket__inner-size basket__inner-size--orders">20</div>
+                  <p class="orders__good-count">Количество: 2</p>
+                </div>
+              <div class="orders-controls">
+                <p class="orders__consideration orders__consideration--accept">Принят</p>
+                <a href="#" class="orders-controls_dismiss" name="'.$row["id"].'">Отменить</a>
+              </div>
+            </li>
+            <li class="orders__item">
+              <div class="orders-good">
+                <img class="orders__good-img" src="img/brilliant-page/11.png" alt="">
+                <div class="orders__good-info">
+                  <h2 class="orders__good-title">Что-то там из брилланта</h2>
+                  <p class="orders__good-price">30000 р.</p>
+                  <div class="basket__inner-size basket__inner-size--orders">20</div>
+                  <p class="orders__good-count">Количество: 2</p>
+                </div>
+              <div class="orders-controls">
+                <p class="orders__consideration orders__consideration--null">На рассмотрении</p>
+                <a href="#" class="orders-controls_dismiss" name="'.$row["id"].'">Отменить</a>
+              </div>
+            </li>
+            <li class="orders__item">
+              <div class="orders-good">
+                <img class="orders__good-img" src="img/brilliant-page/11.png" alt="">
+                <div class="orders__good-info">
+                  <h2 class="orders__good-title">Что-то там из брилланта</h2>
+                  <p class="orders__good-price">30000 р.</p>
+                  <div class="basket__inner-size basket__inner-size--orders">20</div>
+                  <p class="orders__good-count">Количество: 2</p>
+                </div>
+              <div class="orders-controls">
+                <p class="orders__consideration orders__consideration--null">На рассмотрении</p>
+                <a href="#" class="orders-controls_dismiss" name="'.$row["id"].'">Отменить</a>
+              </div>
+            </li>
+            <li class="orders__item">
+              <div class="orders-good">
+                <img class="orders__good-img" src="img/brilliant-page/11.png" alt="">
+                <div class="orders__good-info">
+                  <h2 class="orders__good-title">Что-то там из брилланта</h2>
+                  <p class="orders__good-price">30000 р.</p>
+                  <div class="basket__inner-size basket__inner-size--orders">20</div>
+                  <p class="orders__good-count">Количество: 2</p>
+                </div>
+              <div class="orders-controls">
+                <p class="orders__consideration orders__consideration--null">На рассмотрении</p>
+                <a href="#" class="orders-controls_dismiss" name="'.$row["id"].'">Отменить</a>
+              </div>
+            </li>
+           -->
